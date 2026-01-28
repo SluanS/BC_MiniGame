@@ -1,0 +1,81 @@
+.position, .boat-position{
+    border: 2px black solid;
+    height: 100px;
+    width: 80px;
+    position: absolute;
+}
+
+#position1{
+    left: 440px;
+    bottom: 120px;
+}
+#position2{
+    left: 370px;
+    bottom: 100px;
+}
+#position3{
+    left: 290px;
+    bottom: 85px;
+}
+#position4{
+    left: 200px;
+    bottom: 60px;
+}
+#position5{
+    left: 100px;
+    bottom: 85px;
+}
+#position6{
+    left: 19px;
+    bottom: 60px;
+}
+
+#position7{
+    height: 90px;
+    width: 70px;
+    right: 440px;
+    bottom: 120px;
+}
+#position8{
+    height: 95px;
+    width: 75px;
+    right: 370px;
+    bottom: 100px;
+}
+#position9{
+    right: 290px;
+    bottom: 85px;
+}
+#position10{
+    right: 200px;
+    bottom: 80px;
+}
+#position11{
+    right: 100px;
+    bottom: 80px;
+}
+#position12{
+    right: 10px;
+    bottom: 80px;
+}
+
+.boat-position{ 
+    position: static;
+    display: inline-block;
+    bottom: 40px;
+    margin-left: -10px;
+}
+
+.boat-position img{
+    height: 100%;
+}
+
+.interactive-div{
+    position: absolute;
+    bottom: 30px;
+    left: 500px;
+    height: auto;
+    width: auto;
+    z-index: 1;
+
+}

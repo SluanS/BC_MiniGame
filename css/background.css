@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+h1{
+    font-family: "Pixelify Sans", sans-serif;
+    background-image: url("/images/texture.png");
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 75px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.background{
+ 
+   
+    height: 100vh;
+    background-color: aqua;
+    background-image: url("/images/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
