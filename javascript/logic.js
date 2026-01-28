@@ -2,7 +2,8 @@ let characters = document.getElementsByClassName("char")
 let boatPositions = document.querySelectorAll(".boat-position");
 let boat = {
     direction: "left",
-    freePlaces: 2
+    freePlaces: 2,
+    boatDiv: document.querySelector(".interactive-div")
 }
 
 
@@ -64,6 +65,19 @@ function sendBoat(){
         if (position.children.length > 0){
             theresPassenger = true
         }
+    }
+    if (boat.direction === "left"){
+        boat.direction = "right"
+        boat.boatDiv.style.left = "900px"
+        document.querySelector(".pointer-left").style.display =  "inline-block"
+        document.querySelector(".pointer-right").style.display =  "none"
+
+    }
+    else{
+        boat.direction = "left"
+        boat.boatDiv.style.left = "500px"
+        document.querySelector(".pointer-left").style.display =  "none"
+        document.querySelector(".pointer-right").style.display =   "inline-block"
     }
     return theresPassenger;
 }

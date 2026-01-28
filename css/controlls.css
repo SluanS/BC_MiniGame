@@ -1,8 +1,6 @@
 .controll{
     position: absolute;
-    display: flex;
     height: 70px;
-    justify-content: center;
     bottom: 20px;
     right: 10px;
     border: 5px green solid;
@@ -14,18 +12,23 @@
 
 
 .central-circle{
+    position: absolute;
+    left: 120px;
     height:65px;
     padding-top: 10px;
-    /* background-color: tomato; */
+    margin: 0 10px;
 }
 
 .central-circle:hover{
-    height: 80px;
+    height: 75px;
     cursor: pointer;
-    /* margin: 3px 10px 1px 10px; */
+    top: -5px;
+    left: 115px;
 }
 
 .pointer-right{
+    position: absolute;
+    left: 190px;
     height: 45px;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -33,9 +36,13 @@
 
 .pointer-right:hover{
     height: 55px;
+    top: -5px;
     cursor: pointer;
 }
 .pointer-left{
+    position: absolute;
+    left: 85px;
+    display: none;
     height: 45px;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -43,5 +50,6 @@
 
 .pointer-left:hover{
     height: 55px;
+    top: -5px;
     cursor: pointer;
 }

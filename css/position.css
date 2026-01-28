@@ -1,5 +1,4 @@
 .position, .boat-position{
-    border: 2px black solid;
     height: 100px;
     width: 80px;
     position: absolute;
@@ -62,7 +61,7 @@
 .boat-position{ 
     position: static;
     display: inline-block;
-    bottom: 40px;
+    /* bottom: 40px; */
     margin-left: -10px;
 }
 
@@ -77,5 +76,4 @@
     height: auto;
     width: auto;
     z-index: 1;
-
 }
