@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+.fundo-go{
+    display: none;
+    position: absolute;
+    margin: 0;
+    margin-top: -10px;
+    background-color: transparent;
+    backdrop-filter: blur(3px) grayscale(80%);
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    top: 10px;
+}
+
+.game-over{
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: #FFC979;
+    border: 3px solid #342215;
+    position: relative;
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-bottom: 50px;
+    margin-top: 200px;
+    margin-left: 320px;
+   
+}
+
+.game-over::after{
+    content: "";
+    width: 102%;
+    height: 107%;
+    background-image: radial-gradient(circle, #974405 70%, #DA7905 90%);
+    border: 7px double #6e3408;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 2px 10px 10px rgb(0, 0, 0);
+}
+
+.game-over .close-button{
+    font-family: "Pixelify Sans", sans-serif;
+    border: none;
+    font-weight: 600;
+    font-size: 35px;
+    color: rgb(159, 0, 0);
+    border-bottom: 2px solid #342215;
+    border-right: 3px solid #342215;
+    background-color: transparent;
+    margin-left: 800px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.game-over .close-button:active{
+    border: none;
+    border-left: 3px solid #342215;
+    border-top: 3px solid #342215;
+}
+.game-over h1{
+    font-size: 80px;
+    color: #DB751E;
+    text-shadow: 0px 4px #b82c1a, 1px 1px 1px black;
+    margin-top: 10px;
+    margin-bottom: 1px;
+    text-align: center;
+    flex: 100%;
+}
+
+.game-over h2{
+    text-align: center;
+    flex: 100%;
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+
+.game-over h3{
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    text-shadow: 2px 2px black;
+    flex: 100%;
+}
+
+.game-over .alternative{
+    background-color: transparent;
+    border: none;
+    font-size: 19px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px black;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    text-align: center;
+    flex: 100%;
+    cursor: pointer;
+}
+
+.alternative:hover::before{
+    content: url("/images/pointing-hand.png");
+    width: 50px;
+    height: 100px;
+}

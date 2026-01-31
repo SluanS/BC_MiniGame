@@ -1,21 +1,33 @@
 .controll{
+    display: none;
     position: absolute;
-    height: 70px;
+    height: 128px;
     bottom: 20px;
-    right: 10px;
-    border: 5px green solid;
-    background-color: white;
+    right: 35px;
+    border: 5px rgb(217, 225, 217) dotted;                           
+    /* background-image: linear-gradient(to bottom, white, rgb(153, 205, 152)); */
+    background-image: url("/images/image.png");
+    background-size: cover;
     box-shadow: 0px 10px 25px black;
     z-index: 999;
-    width: 300px;
+    width: 185px;
+}
+.controll::before{
+    font-family: "Pixelify Sans", sans-serif;
+    content: "Move Boat";
+    position: absolute;
+    top: 15px;
+    left: 59px;
+    color: rgb(2, 16, 0);
+    text-shadow: 0px 1px rgb(94, 200, 137);
 }
 
 
 .central-circle{
     position: absolute;
-    left: 120px;
+    left: 60px;
     height:65px;
-    padding-top: 10px;
+    padding-top: 40px;
     margin: 0 10px;
 }
 
@@ -23,14 +35,14 @@
     height: 75px;
     cursor: pointer;
     top: -5px;
-    left: 115px;
+    left: 60px;
 }
 
 .pointer-right{
     position: absolute;
-    left: 190px;
+    left: 125px;
     height: 45px;
-    margin-top: 15px;
+    margin-top: 45px;
     margin-bottom: 10px;
 }
 
@@ -41,10 +53,10 @@
 }
 .pointer-left{
     position: absolute;
-    left: 85px;
+    left: 25px;
     display: none;
     height: 45px;
-    margin-top: 15px;
+    margin-top: 45px;
     margin-bottom: 10px;
 }
 

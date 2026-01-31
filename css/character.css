@@ -1,4 +1,4 @@
-.char{
+.miss, .cani{
     cursor: pointer;
     height: 100%;
 }
@@ -6,9 +6,12 @@
 #char1:hover{
     height: 105px;
 }
+
+
 #char2:hover{
     height: 105px;
 }
+
 #char3:hover{
     height: 105px;
 }

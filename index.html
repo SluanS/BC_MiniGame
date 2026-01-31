@@ -12,22 +12,23 @@
         <header>
             <nav>
                 <a href="#"><img class="logo" src="/images/logo.png" alt=""></a>
-                <a href="#"><img src="/images/menu-icon.png" alt=""></a>
+                <a href="#"><img class="menu-icon" src="/images/menu-icon.png" alt=""></a>
                 <div class="theme">
                     <img src="/images/theme-icon/alien-theme.png" alt="">
                     <img src="/images/theme-icon/angel-theme.png" alt="">
                     <img src="/images/theme-icon/witch-theme.png" alt="">
                 </div>
+                <img onclick="resetGame()" class="reestart" src="/images/reestart.png" alt="">
                 <div class="tip">?</div>
             </nav>
         </header>
         <h1>Ajude-os a atravessar</h1>
-        <div class="position" id="position1"><img class="char" id="char1" src="/images/characters/Drake.gif" alt=""></div>
-        <div class="position" id="position2"><img class="char" id="char2" src="/images/characters/Jefrey.gif" alt=""></div>
-        <div class="position" id="position3"><img class="char" id="char3" src="/images/characters/Canibal Lecter.gif" alt=""></div>
-        <div class="position" id="position4"><img class="char" id="char4" src="/images/characters/Nun.gif" alt=""></div>
-        <div class="position" id="position5"><img class="char" id="char5" alt="" src="/images/characters/Cardial.gif"></div>
-        <div class="position" id="position6"><img class="char" id="char6" alt="" src="/images/characters/Pope.gif"></div>
+        <div class="position" id="position1"><img class="cani" id="char1" src="/images/characters/Drake.gif" alt=""></div>
+        <div class="position" id="position2"><img class="cani" id="char2" src="/images/characters/Jefrey.gif" alt=""></div>
+        <div class="position" id="position3"><img class="cani" id="char3" src="/images/characters/Canibal Lecter.gif" alt=""></div>
+        <div class="position" id="position4"><img class="miss" id="char4" src="/images/characters/Nun.gif" alt=""></div>
+        <div class="position" id="position5"><img class="miss" id="char5" alt="" src="/images/characters/Cardial.gif"></div>
+        <div class="position" id="position6"><img class="miss" id="char6" alt="" src="/images/characters/Pope.gif"></div>
         <div class="position" id="position7"></div>
         <div class="position" id="position8"></div>
         <div class="position" id="position9"></div>
@@ -42,8 +43,22 @@
     </div> 
     <div class="controll">
         <img onclick="sendBoat()" class="pointer-left" src="/images/controls/pointer-left.png" alt="">
-        <img class="central-circle"src="/images/controls/central-circle.png" alt="">
+        <img onclick="cleanBoat()" class="central-circle"src="/images/controls/central-circle.png" alt="">
         <img onclick="sendBoat()" class="pointer-right"src="/images/controls/pointer-right.png" alt="">
     </div>
+        <div class="fundo-go">
+            <div class="game-over">
+            <button onclick="closeWindow()" class="close-button" type="button" aria-label="Close">X</button>
+            <img src="#" alt="">
+            <img src="#" alt="">
+            <img src="#" alt="">
+            <h1>Game Over</h1>
+            <h2>Menssagem rotativa</h2>
+            <h3>Tentar de novo?</h3>
+            <button onclick="resetGame()" class="alternative">Sim</button>
+            <button onclick="closeWindow()" class="alternative">Não</button>
+        </div>
+        </div>
+   
 </body>
 </html>

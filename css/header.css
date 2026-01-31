@@ -23,13 +23,23 @@ header nav{
 header img{
     margin-top: 10px;
     height: 30px;
-    margin-left: 25px;
+    margin-left: 20px;
     cursor: pointer;
 }
 
+.menu-icon{
+    margin-top: 20px;
+}
+
+.reestart{
+    height: 45px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
 .logo{
-    margin-top: -5px;
-    margin-left: 35px;
+    margin-top: 5px;
+    margin-left: 50px;
     height: 50px;
 }
 
@@ -39,7 +49,8 @@ header img{
     align-items: center;
     width: 150px;
     margin-left: auto;
-    background-color:  rgb(30, 150, 46);
+    background-color:  #68C550;
+    border: 2px solid rgb(35, 99, 17);
     border-radius: 15px;
     cursor: pointer;
 }
@@ -47,16 +58,17 @@ header img{
 .theme img{
     margin: 0;
     height: 40px;
-    background-color: rgb(44, 238, 102);
+    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(52, 102, 67) );
+    border: 2px solid rgb(35, 99, 17);
     border-radius: 5px;
 }   
 
 .tip{
-    background-color: green;
+    background-image: linear-gradient(to bottom, green 50%, #33a004);
     color: white;
-    border: 2px solid black;
+    border: 2px solid rgb(35, 99, 17);
     height: 100%;
-    margin: 15px 30px 0px 100px;
+    margin: 20px 50px 0px 50px;
     border-radius: 100px;
     width: 20px;
     text-align: center;
@@ -65,5 +77,5 @@ header img{
 
 .tip:hover{
     color: black;
-    background-color: white;
+    background-image: linear-gradient(to right, white, gray);
 }
