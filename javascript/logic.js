@@ -9,16 +9,21 @@ let boat = {
 document.addEventListener("click", (e) => {
 
     let target = e.target
-    if (target.className === "cani" || target.className === "miss"){
-        if (target.parentElement.className === "boat-position"){  
-            removeFromBoat(target)
-        }
-        else if (target.parentElement.className === "position") {
-            placeInBoat(target)
-           
+    if (boat.direction != "stoped"){
+        if (target.className === "cani" || target.className === "miss"){
+            if (target.parentElement.className === "boat-position"){  
+                removeFromBoat(target)
+            }
+            else if (target.parentElement.className === "position") {
+                placeInBoat(target)
+            
+            }
         }
     }
-})
+}
+)
+
+
 
 function placeInBoat(image){
     let parentId = image.parentElement.id
@@ -44,7 +49,7 @@ function removeFromBoat(image){
         allPositions = document.querySelectorAll(".position")
         for (let i = 0; i < 6; i++){
             let position = allPositions[i]
-            if(position.children.length === 0){
+            if(position.children.length === 1){
                 image.remove()
                 position.appendChild(image)
                 return
@@ -81,7 +86,7 @@ function sendBoat(){
             gameRules()
 
         }
-        else{
+        else if(boat.direction === "right"){
             boat.direction = "left"
             boat.boatDiv.style.left = "500px"
             document.querySelector(".pointer-left").style.display =  "none"
@@ -163,11 +168,14 @@ function gameRules(){
     console.log("----------------------------------------")
     let CharatersInLeft = missInLeft + caniInLeft;
     let CharatersInRight = missInRight + caniInRight;
+    document.querySelector(".contador").innerHTML = `${CharatersInRight}/6`
     if (missInLeft > 0 && missInRight > 0){
         if(CharatersInLeft > 0 && CharatersInRight > 0){
         if (missInLeft < caniInLeft || missInRight < caniInRight){
             console.log("game-over")
             gameOver = true
+            boat.direction = "stoped"
+            document.querySelector(".main-header").innerHTML = "Game Over"
         }
     }
     }
@@ -193,8 +201,24 @@ addEventListener("keydown", (e) => {
 })
 
 addEventListener("keydown", (e)=> {
-    console.log(e)
     if (e.key === " "){
         cleanBoat()
+    }
+})
+
+addEventListener("keydown", (e) => {
+    allPosition = document.querySelectorAll(".position")
+    for (let i = 0; i < allPosition.length; i++){
+        let n = allPosition[i].id.replace(/[^0-9]/g, "")
+        if (e.key === n){
+            children = allPosition[i].children
+            for (let j = 0; j < children.length;j++){
+                if (children[j].className != "tecla"){
+                    placeInBoat(children[j])
+                      
+                }
+            }
+          
+        }
     }
 })

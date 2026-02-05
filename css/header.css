@@ -28,17 +28,20 @@ header img{
 }
 
 .menu-icon{
-    margin-top: 20px;
+    float: right;
+    margin-top: 18px;
 }
 
 .reestart{
-    height: 45px;
+    height: 35px;
+    margin-top: 15px;
     margin-bottom: 10px;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .logo{
     margin-top: 5px;
+    margin-right: 1050px;
     margin-left: 50px;
     height: 50px;
 }
@@ -55,20 +58,12 @@ header img{
     cursor: pointer;
 }
 
-.theme img{
-    margin: 0;
-    height: 40px;
-    background-image: radial-gradient(circle, rgb(255, 255, 255), rgb(52, 102, 67) );
-    border: 2px solid rgb(35, 99, 17);
-    border-radius: 5px;
-}   
-
 .tip{
     background-image: linear-gradient(to bottom, green 50%, #33a004);
     color: white;
     border: 2px solid rgb(35, 99, 17);
     height: 100%;
-    margin: 20px 50px 0px 50px;
+    margin: 20px 20px 0px 50px;
     border-radius: 100px;
     width: 20px;
     text-align: center;
@@ -77,5 +72,6 @@ header img{
 
 .tip:hover{
     color: black;
-    background-image: linear-gradient(to right, white, gray);
+    background-image: none;
+    background-color: white;
 }

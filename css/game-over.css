@@ -11,6 +11,8 @@
     width: 100%;
     z-index: 999;
     top: 10px;
+    animation-name: gameOver;
+    animation-duration: 2s;
 }
 
 .game-over{
@@ -27,7 +29,6 @@
     padding-bottom: 50px;
     margin-top: 200px;
     margin-left: 320px;
-   
 }
 
 .game-over::after{
@@ -103,4 +104,15 @@
     content: url("/images/pointing-hand.png");
     width: 50px;
     height: 100px;
+}
+
+
+@keyframes gameOver{
+    from{
+        transform: translatey(100vh);
+    }
+    to{
+      otransform: translatey(0);
+  }
+
 }
