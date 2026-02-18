@@ -4,7 +4,7 @@ let boat = {
     freePlaces: 2,
     boatDiv: document.querySelector(".interactive-div")
 }
-
+let gameOver = false;
 
 document.addEventListener("click", (e) => {
 
@@ -23,16 +23,13 @@ document.addEventListener("click", (e) => {
 }
 )
 
-
-
 function placeInBoat(image){
     let parentId = image.parentElement.id
     let n = parentId.replace(/[^0-9]/g, "")
-    console.log(n)
 
     if (n > 6 && boat.direction === "left") return
 
-    if(n < 6 && boat.direction === "right") return
+    if(n <= 6 && boat.direction === "right") return
 
     for (let i = 0; i < boatPositions.length; i++ ){
         bp = boatPositions[i]
@@ -60,7 +57,7 @@ function removeFromBoat(image){
         allPositions = document.querySelectorAll(".position")
         for (let i = 6; i < 12; i++){
             let position = allPositions[i]
-            if(position.children.length === 0){
+            if(position.children.length === 1){
                 image.remove()
                 position.appendChild(image)
                 return
@@ -110,57 +107,52 @@ function cleanBoat(){
 }
 
 function gameRules(){
-    let gameOver = false
-    let missInLeft = 0;
-    let missInRight = 0;
-    let caniInLeft = 0 ;
     let caniInRight = 0;
-
-    let inEarth = document.querySelectorAll(".position")
-    let inBoat = document.querySelectorAll(".boat-position")
-    for (let i = 0; i < inEarth.length; i++){
-       let children = inEarth[i].children
-        if (i<=5){
-            if (children.length > 0){
-                if (children[0].className === "miss"){
-                    missInLeft += 1
-                } else{
-                    caniInLeft += 1
+    let caniInLeft = 0;
+    let missInRight = 0;
+    let missInLeft = 0;
+    let allPositions = document.querySelectorAll(".position")
+    let boatPositions = document.querySelectorAll(".boat-position")
+    for (let i = 0; i < allPositions.length; i++){
+        childrens = allPositions[i].children
+        for (let c = 0; c < childrens.length; c++)
+            if (i < 6){ 
+                if (childrens[c].className === "cani"){
+                    caniInLeft += 1;
+                }
+                else if (childrens[c].className === "miss"){
+                    missInLeft += 1;
+                }
+            } else{
+                   if (childrens[c].className === "cani"){
+                    caniInRight += 1;
+                }
+                else if (childrens[c].className === "miss"){
+                    missInRight += 1;
                 }
             }
-        }
-        else{
-             if (children.length > 0){
-                if (children[0].className === "miss"){
-                    missInRight += 1
-                } else{
-                    caniInRight += 1
+    }
+    for (let bp = 0; bp < boatPositions.length; ++bp){
+        inBoat = boatPositions[bp].children
+        console.log("bp = "+bp)
+        if (inBoat.length > 0){
+            if (boat.direction === "left"){
+                if (inBoat[0].className === "cani"){
+                    caniInLeft += 1;
+                } else if(inBoat[0].className === "miss"){
+                    missInLeft += 1;
+                }
+            }
+            else if(boat.direction === "right"){
+                  if (inBoat[0].className === "cani"){
+                    caniInRight += 1;
+                } else if(inBoat[0].className === "miss"){
+                    missInRight += 1;
                 }
             }
         }
     }
-
-    for (let i = 0; i < inBoat.length; i++){
-        let children = inBoat[i].children
-        if (children.length > 0){
-            if (boat.direction == "left"){
-                if (children[0].className === "miss"){
-                    missInLeft += 1
-                } else{
-                    caniInLeft += 1
-                }
-            }
-            else{
-                if (children.length > 0){
-                if (children[0].className === "miss"){
-                    missInRight += 1
-                } else{
-                    caniInRight += 1
-                }
-            }
-        }
-    }
-}
+    
     console.log("Missionários na esquerda: " + missInLeft)
     console.log("Canibais na esquerda: " + caniInLeft)
     console.log("Missionários na direita: " + missInRight)
@@ -170,6 +162,7 @@ function gameRules(){
     let CharatersInRight = missInRight + caniInRight;
     document.querySelector(".contador").innerHTML = `${CharatersInRight}/6`
     if (missInLeft > 0 && missInRight > 0){
+        console.log("primeira condicional")
         if(CharatersInLeft > 0 && CharatersInRight > 0){
         if (missInLeft < caniInLeft || missInRight < caniInRight){
             console.log("game-over")
@@ -186,6 +179,7 @@ function gameRules(){
     }
 }
 
+
 function closeWindow(){
     document.querySelector(".fundo-go").style.display = "none"
 }
@@ -193,6 +187,15 @@ function closeWindow(){
 function resetGame(){
     location.reload()
 }
+
+// function interactionGuide(){
+//     let guideStatus = document.querySelector(".guide")
+//     if(guideStatus.style.display === "none"){
+//         guideStatus.style.display = "block"
+//     }else{
+//         guideStatus.style.display = "none"
+//     }
+// }
 
 addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight" || e.key=== "ArrowLeft"){
@@ -207,18 +210,28 @@ addEventListener("keydown", (e)=> {
 })
 
 addEventListener("keydown", (e) => {
-    allPosition = document.querySelectorAll(".position")
-    for (let i = 0; i < allPosition.length; i++){
-        let n = allPosition[i].id.replace(/[^0-9]/g, "")
-        if (e.key === n){
-            children = allPosition[i].children
-            for (let j = 0; j < children.length;j++){
-                if (children[j].className != "tecla"){
-                    placeInBoat(children[j])
-                      
+    pressed = e.key
+    if (!gameOver){
+        allPosition = document.querySelectorAll(".position")
+        if (parseInt(pressed) > 6){
+                return
+        }
+            for (let i = 0; i < allPosition.length; i++){
+                let n = allPosition[i].id.replace(/[^0-9]/g, "")
+                if (boat.direction === "right"){
+                    pressed = parseInt(e.key) + 6;
+                }
+                if (pressed == n){
+                    children = allPosition[i].children
+                    for (let j = 0; j < children.length;j++){
+                        if (children[j].className != "tecla"){
+                            placeInBoat(children[j])
+                            
+                        }
+                    }
+                
                 }
             }
-          
         }
-    }
-})
+}
+)

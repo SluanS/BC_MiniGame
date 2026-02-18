@@ -14,28 +14,80 @@
                 <a href="#"><img class="logo" src="/images/logo.png" alt=""></a>
                 <a href="#"><img class="menu-icon" src="/images/menu-icon.png" alt=""></a>
                 <img onclick="resetGame()" class="reestart" src="/images/reestart.png" alt="">
-                <div class="tip">?</div>
             </nav>
         </header>
         <h1 class="main-header">Ajude-os a atravessar</h1>
         <h2 class="contador">0/6</h2>
+        <div class="guide">
+            <button onclick="interactionGuide()" class="closeGuide">X</button>
+            <h1>Guia</h1>
+            <div class="floating-div">
+                <button onclick="interactionGuide()" class="start-game">Vamos lá</button>
+                <button class="go-tutorial">Ir para tutorial</button>
+            </div>
+            <div class="introduction">
+                <p>Parece que os nossos <span>missionários</span> estão enfrentando alguns problemas em sua missão de catequisição nessa ilha remota. Agora eles se encontram precisando <span>chegar a outra margem da praia</span>, porém, eles não são os únicos que querem atravessar. Há também os <span>nativos</span> da ilham que aparentam uma predileção estranha em se servir de missionários vuneráveis. <br><br> Cabe a você ajudar esse distinto grupo a atravessar para a outra margem com nada além de um barquinho furreca com espaço para dois</p>
+            </div>
+            <div class="option1">
+                <div class="box1">
+                    <h2>Regras do jogo</h2>
+                    <img src="/images/maior-que.png" alt="">
+                </div>
+                <div class="game-rules">
+                    <p><span>Considere que:</span><br>Temos </p>
+                    <ul>
+                        <li>3 missionários</li>
+                        <li>3 canibais</li>
+                    </ul>
+                    <p>Sobre o barco:</p>
+                        <ul>
+                            <li>Capacidade de levar até <span>2</span> individuos por vez</li>
+                            <li>O barco precisa de ao menos <span>1</span> indiduo dentro dele para navegar entre as duas margens</li>
+                            <li>O barco pode transitar pelas duas margens quantas vezes forem necessárias</li>
+                        </ul>
+                    <p><span>Importante!</span></p>
+                    <ul>
+                        <li>Você <span>NÃO</span> deve permitir que o número de <span>CANIBAIS</span> seja <span>MAIOR</span> do que o número de <span>MISSIONÁRIOS</span> em nenhuma das duas margens, não queremos saciar o apetite dos nativos ao deixa-los em vantagem númerica, não é mesmo?</li>
+                    </ul>   
+                    <div class="illustrative-exemple">
+                        <div class="wrong-exemple">
+                            <img class="wrong-signal" src="/images/errado.png" alt="">
+                            <img class="pope-dead-head" src="/images/characters/head/Pope dead head.png" alt="">
+                            <img src="/images/menor-que.png" alt="">
+                            <img src="/images/characters/head/Cani drake head.png" alt="">
+                            <img src="/images/characters/head/Canibal Lecter head.png" alt="">
+                        </div>
+                        <div class="right-exemple">
+                            <img class="right-signal" src="/images/correto.png" alt="">
+                            <img src="/images/characters/head/Nun head.png" alt="">
+                            <img src="/images/characters/head/cardial head.png" alt="">
+                            <img src="/images/sinal-igual.png" alt="">
+                            <img src="/images/characters/head/Canibal Lecter head.png" alt="">
+                            <img src="/images/characters/head/Cani drake head.png" alt="">
+                        </div>
+                    </div>
+                    <p>Você vence quando todos os <span>TODOS OS 6</span> individuos atravessarem para a outra margem.</p> 
+                </div>          
+            </div>
+            </div>
         <div class="position" id="position1"><img class = "tecla" src="/images/teclas/tecla1.png" alt=""><img class="cani" id="char1" src="/images/characters/Drake.gif" alt=""></div>
         <div class="position" id="position2"><img class = "tecla" src="/images/teclas/tecla2.png" alt=""><img class="cani" id="char2" src="/images/characters/Jefrey.gif" alt=""></div>
         <div class="position" id="position3"><img class = "tecla" src="/images/teclas/tecla3.png" alt=""><img class="cani" id="char3" src="/images/characters/Canibal Lecter.gif" alt=""></div>
         <div class="position" id="position4"><img class = "tecla" src="/images/teclas/tecla4.png" alt=""><img class="miss" id="char4" src="/images/characters/Nun.gif" alt=""></div>
         <div class="position" id="position5"><img class = "tecla" src="/images/teclas/tecla5.png" alt=""><img class="miss" id="char5" alt="" src="/images/characters/Cardial.gif"></div>
         <div class="position" id="position6"><img class = "tecla" src="/images/teclas/tecla6.png" alt=""><img class="miss" id="char6" alt="" src="/images/characters/Pope.gif"></div>
-        <div class="position" id="position7"></div>
-        <div class="position" id="position8"></div>
-        <div class="position" id="position9"></div>
-        <div class="position" id="position10"></div>
-        <div class="position" id="position11"></div>
-        <div class="position" id="position12"></div>
+        <div class="position" id="position7"><img class = "tecla" src="/images/teclas/tecla1.png" alt=""></div>
+        <div class="position" id="position8"><img class = "tecla" src="/images/teclas/tecla2.png" alt=""></div>
+        <div class="position" id="position9"><img class = "tecla" src="/images/teclas/tecla3.png" alt=""></div>
+        <div class="position" id="position10"><img class = "tecla" src="/images/teclas/tecla4.png" alt=""></div>
+        <div class="position" id="position11"><img class = "tecla" src="/images/teclas/tecla5.png" alt=""></div>
+        <div class="position" id="position12"><img class = "tecla" src="/images/teclas/tecla6.png" alt=""></div>
         <div class="interactive-div">
             <div class="boat"><img src="/images/characters/Barco-gif.gif" alt=""></div>
             <div class="boat-position" id="bp1"></div>
             <div class="boat-position" id="bp2"></div>
         </div>
+        <div class="help"><button onclick="interactionGuide()">?</button></div>
     </div> 
     <div class="controll">
         <img onclick="sendBoat()" class="pointer-left" src="/images/controls/pointer-left.png" alt="">

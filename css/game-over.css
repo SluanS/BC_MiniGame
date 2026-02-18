@@ -12,12 +12,13 @@
     z-index: 999;
     top: 10px;
     animation-name: gameOver;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
+
 
 .game-over{
     font-family: "Pixelify Sans", sans-serif;
-    background-color: #FFC979;
+    background-image: url("/images/texture.png");
     border: 3px solid #342215;
     position: relative;
     width: 900px;
@@ -29,17 +30,7 @@
     padding-bottom: 50px;
     margin-top: 200px;
     margin-left: 320px;
-}
-
-.game-over::after{
-    content: "";
-    width: 102%;
-    height: 107%;
-    background-image: radial-gradient(circle, #974405 70%, #DA7905 90%);
-    border: 7px double #6e3408;
-    position: absolute;
-    z-index: -1;
-    box-shadow: 2px 10px 10px rgb(0, 0, 0);
+    border: 10px #a56300 solid;
 }
 
 .game-over .close-button{
@@ -63,8 +54,8 @@
 }
 .game-over h1{
     font-size: 80px;
-    color: #DB751E;
-    text-shadow: 0px 4px #b82c1a, 1px 1px 1px black;
+    color: #1edb66;
+    text-shadow: 0px 4px #0f3f16, 1px 1px 1px black;
     margin-top: 10px;
     margin-bottom: 1px;
     text-align: center;
@@ -106,13 +97,13 @@
     height: 100px;
 }
 
-
-@keyframes gameOver{
-    from{
-        transform: translatey(100vh);
+@keyframes gameOver {
+    0%{
+        display: block;
+        opacity: 0%;
     }
-    to{
-      otransform: translatey(0);
-  }
-
+    100%{
+        opacity: 100%;
+    }
+    
 }

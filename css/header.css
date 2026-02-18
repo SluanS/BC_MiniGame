@@ -4,8 +4,6 @@ body{
 }
 
 header{
-    display: flex;
-    align-items: center;
     background-image: url("/images/header-background.png");
     background-size: 10px;
     height: 70px;
@@ -14,64 +12,25 @@ header{
 }
 
 header nav{
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
-}
-
-header img{
-    margin-top: 10px;
-    height: 30px;
-    margin-left: 20px;
-    cursor: pointer;
-}
-
-.menu-icon{
-    float: right;
-    margin-top: 18px;
-}
-
-.reestart{
-    height: 35px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    margin-right: 20px;
+    height: 100%;
 }
 
 .logo{
     margin-top: 5px;
-    margin-right: 1050px;
-    margin-left: 50px;
+    margin-left: 60px;
     height: 50px;
 }
 
-.theme{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    margin-left: auto;
-    background-color:  #68C550;
-    border: 2px solid rgb(35, 99, 17);
-    border-radius: 15px;
-    cursor: pointer;
+.menu-icon{
+    float: right;
+    margin-top: 20px;
+    margin-right: 100px;
+    height: 50%;
 }
-
-.tip{
-    background-image: linear-gradient(to bottom, green 50%, #33a004);
-    color: white;
-    border: 2px solid rgb(35, 99, 17);
-    height: 100%;
-    margin: 20px 20px 0px 50px;
-    border-radius: 100px;
-    width: 20px;
-    text-align: center;
+.reestart{
+    float: right;
+    margin-right: -90px;
+    margin-top: 20px;
+    height: 50%;
     cursor: pointer;
-}
-
-.tip:hover{
-    color: black;
-    background-image: none;
-    background-color: white;
 }

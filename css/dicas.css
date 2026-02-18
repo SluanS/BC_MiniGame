@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+.guide{
+    /* display: none; */
+    position: absolute;
+    font-family: "Pixelify Sans", sans-serif;
+    background-image: url("/images/wood.png");
+    width: 700px;
+    height: 580px;
+    padding: 10px 25px;
+    box-shadow: 1px 1px 10px black;
+    border:rgb(194, 138, 64) solid 5px;
+    overflow-y: scroll;
+    scrollbar-color: #DBAB72;
+    z-index: 999;
+    right: 345px;
+    top: 85px;
+    animation: guideIntro;
+    animation-duration: 1s;
+}
+
+.guide h1, h2{
+    color: #d3bea3;
+    text-shadow: 2px 2px black, 3px 3px 2px black;
+    font-size: 45px;
+}
+
+.guide .box1{
+    height: 40px;
+    cursor: pointer;
+    background-image: none;
+    margin-top: 10px;
+}
+
+.box1 h2{
+    margin-top: 1px;
+    margin-left: 10px;
+    color: rgb(39, 162, 35);
+    display: inline-block;
+}
+
+.box1 img {
+    height: 20px;
+    transform: rotate(90deg);
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.introduction{
+    margin-top: -95px;
+}
+
+.closeGuide{
+    font-family: "Pixelify Sans", sans-serif;
+    height: 30px; 
+    width: 30px;
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: #DBAB72;
+    position:sticky;
+    border-radius: 100%;
+    top: 5px;
+    float: right;
+    cursor: pointer;
+}
+
+.closeGuide:hover{
+    background-color: white;
+    color: #7c360f;
+}
+
+.closeGuide:active{
+    height: 35px;
+    font-size: 25px;
+}
+
+.guide div{
+    background-image: radial-gradient(#DBAB72 40%,  #c78637 60%);
+    border: black 2px solid;
+    padding: 10px;
+    border-radius: 20px;
+    padding: 20px;
+    margin:  10px,50px;
+}
+
+.guide p{
+    color: #000f00;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.guide p span{
+    color: rgb(141, 29, 29);
+    text-shadow: #000f00 1px 1px;
+}
+
+.game-rules{
+    background-image: radial-gradient(#DBAB72 40%,  #c78637 60%);
+    margin-bottom: 100px;
+}
+
+.guide h2{
+    font-size: 30px;
+}
+
+ul{
+    margin-top: -10px;
+}
+
+li{
+    list-style-type: square;
+}
+li span{
+    color: rgb(141, 29, 29);
+    text-shadow: #000f00 1px 1px;   
+}
+
+
+.guide button:hover{
+    background-color: white;
+    color: #7c360f;
+}
+
+.guide .illustrative-exemple{
+    width: 250px;
+    border: none;
+    background-image: none;
+    display: flex;
+    width: 600px;
+    justify-content: center;
+}
+
+.illustrative-exemple .wrong-exemple{
+    background-image: none;
+    display: inline-block;
+    width: 200px;
+    margin-left: -15px;
+    background-image: none;
+    background-color: white;
+}
+
+.illustrative-exemple .wrong-signal{
+    height: 45px;
+    display: block;
+    margin-left: 60px;
+    margin-bottom: 15px;
+}
+
+.illustrative-exemple img{
+    height: 25px;
+}
+
+.illustrative-exemple .right-exemple{
+    display: inline-block;
+    background-image: none;
+    background-color: white;
+}
+
+.illustrative-exemple .pope-dead-head{
+    height: 35px;
+    margin-left: 30px;
+}
+
+.illustrative-exemple .right-signal{
+    height: 45px;
+    display: block;
+    margin-left: 70px;
+    margin-bottom: 15px;
+}
+.guide .floating-div{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 470px;
+    background-image: none;
+    border: none;
+}
+
+.floating-div button{
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 600;
+    height: 55px;
+    width: 550px;
+    box-shadow: 3px 3px 2px black, -1px 0px 1px black;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: #edcba1;
+    cursor: pointer;
+    margin: 10px;
+}
+
+@keyframes guideIntro{
+    0%{
+        transform: translate(500px, 300px) scale(0);
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
