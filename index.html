@@ -8,6 +8,27 @@
     <script src="/javascript/logic.js" defer></script>
 </head>
 <body>
+      <div class="rotation-screen">
+        <div class="main-background">
+            <div class="top-color"></div>
+            <div class="middle-color"></div>
+            <div class="bottom-color"></div>
+            <div class="rotation-icons-div">
+                <div class="torch-div">
+                    <img class="torch-orientation-screen" src="/images/rotation-screen-images/Torch-removebg.png" alt="">
+                </div>
+                <div class="rotation-images">
+                    <div class="circular-div">
+                         <div class="circular-div2"></div>
+                    </div>
+                    <img class="phone-rotation-image" src="/images/rotation-screen-images/Smartphone.png" alt="">
+                    <img class="top-rotation-arrow" src="/images/rotation-screen-images/Flecha-orientacao.png" alt="">
+                    <img class="bottom-rotation-arrow" src="/images/rotation-screen-images/Flecha-orientacao.png" alt="">
+                </div>
+            </div>
+            <p>Gire seu telefone para jogar</p>
+        </div>
+    </div>
     <div class="background">
         <header>
             <nav>
@@ -26,10 +47,11 @@
                 <button class="go-tutorial">Ir para tutorial</button>
             </div>
             <div class="introduction">
-                <p>Parece que os nossos <span>missionários</span> estão enfrentando alguns problemas em sua missão de catequisição nessa ilha remota. Agora eles se encontram precisando <span>chegar a outra margem da praia</span>, porém, eles não são os únicos que querem atravessar. Há também os <span>nativos</span> da ilham que aparentam uma predileção estranha em se servir de missionários vuneráveis. <br><br> Cabe a você ajudar esse distinto grupo a atravessar para a outra margem com nada além de um barquinho furreca com espaço para dois</p>
+                <p>Parece que os nossos <span>missionários</span> estão enfrentando alguns problemas em sua missão de catequisição nessa ilha remota. Agora eles se encontram precisando <span>chegar a outra margem da praia</span>, porém, eles não são os únicos que querem atravessar. Há também os <span>nativos</span> da ilha que aparentam uma predileção estranha em se servir de missionários vuneráveis. <br><br> Cabe a você ajudar esse distinto grupo a atravessar para a outra margem com nada além de um barquinho furreca com espaço para dois</p>
             </div>
-            <div class="option1">
-                <div class="box1">
+            
+            <div id="option1" class="option">
+                <div class="box" id="box1">
                     <h2>Regras do jogo</h2>
                     <img src="/images/maior-que.png" alt="">
                 </div>
@@ -67,8 +89,57 @@
                         </div>
                     </div>
                     <p>Você vence quando todos os <span>TODOS OS 6</span> individuos atravessarem para a outra margem.</p> 
-                </div>          
+                </div>    
             </div>
+            <div class="option" id="option2">
+                    <div class="box" id="box2">
+                        <h2>Comandos no desktop</h2>
+                        <img src="/images/maior-que.png" alt="">
+                    </div>
+                    <div class="desktop-comands">
+                    <p>Seleção de personagens:</p>
+                    <div class="character-selection">
+                        <div class="numericKey">
+                            <img src="/images/teclas/tecla1.png" alt="">
+                            <img class="unique-line" src="/images/linha-unica.png" alt="">
+                            <img src="/images/teclas/tecla6.png" alt="">
+                        </div>
+                        <p><span>interação com teclado:</span></p>
+                        <p>Para <span>selecionar</span> um personagem que deseja colocar no barco, basta aperta a <span>tecla númerica</span> correspondente ao número indicado acima da posição atual do personagem. O personagem só será alocado no barco se o barco se encontrar na <span>mesma margem</span> que o personagem e/ou estiver com espaço livres</p>
+                        <p><span>Ou</span></p>
+                        <div class="click-exemple-img"><img src="/images/guide.img/click-illustration.png" alt=""></div>
+                        <p><span>interação com clique</span></p>
+                        <p class="click-tip">Você pode também cliclar com seu mouse diretamente no personagem que deseja mover, se houver espaço disponível o personagem será movido da margem para o barco ou do barco para a margem</p>
+                    </div>
+                    <p>Remover do barco: </p>
+                    <div class="boat-interaction">
+                        <p><span>Tecla espaço para limpar</span></p>
+                        <div class="clean-boat-exemple"> 
+                            <img src="/images/guide.img/boat-illustrative-exemple.png" alt="">
+                            <img class="arrow" src="/images/maior-que.png" alt="">
+                            <img src="/images/teclas/space-key.png" alt="">
+                            <img class="arrow" src="/images/maior-que.png" alt="">
+                            <img class="empty-boat-img" src="/images/guide.img/empty-boat-exemple.png" alt="">
+                        </div>
+                        <p>Caso queira fazer o desembarque rapido dos personagens que estão dentro de barco, basta apertar a tecla "espaço" no seu teclado, assim, todos os personagens abordo desembarcarão na margem atual. <br> Você pode também clicar com o mouse em um personagem especifico que deseja remover do barco</p>
+                    </div>
+                    <p>Movimentação do barco</p>
+                    <div class="boat-movement">
+                        <div class="directional-keys">
+                            <img src="/images/teclas/tecla-direcional-esquerda.png" alt="">
+                            <img src="/images/teclas/tecla-direcional-direita.png" alt="">
+                        </div>
+                        <p><span>Movimentação de barco com teclas direcionais</span></p>
+                        <p>Para mover o barco entre as margens, basta utilizar as teclas direcionais do seu teclado. certifique-se de que haja ao menos um tripulante no barco para que a movimentação do barco entre as margens seja habilitada.</p>
+                    </div>
+                    </div>
+                    </div>
+                <div id="option3" class="option">
+                    <div class="box" id="box3">
+                         <h2>Comandos Smartphone</h2>
+                        <img src="/images/maior-que.png" alt="">
+                    </div>      
+                </div>
             </div>
         <div class="position" id="position1"><img class = "tecla" src="/images/teclas/tecla1.png" alt=""><img class="cani" id="char1" src="/images/characters/Drake.gif" alt=""></div>
         <div class="position" id="position2"><img class = "tecla" src="/images/teclas/tecla2.png" alt=""><img class="cani" id="char2" src="/images/characters/Jefrey.gif" alt=""></div>

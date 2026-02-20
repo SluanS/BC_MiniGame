@@ -1,50 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
 
 .guide{
-    /* display: none; */
+    display: none;
     position: absolute;
     font-family: "Pixelify Sans", sans-serif;
     background-image: url("/images/wood.png");
-    width: 700px;
+    width: 650px;
     height: 580px;
     padding: 10px 25px;
     box-shadow: 1px 1px 10px black;
     border:rgb(194, 138, 64) solid 5px;
     overflow-y: scroll;
-    scrollbar-color: #DBAB72;
     z-index: 999;
-    right: 345px;
-    top: 85px;
+    right: 400px;
+    top: 90px;
     animation: guideIntro;
     animation-duration: 1s;
 }
 
-.guide h1, h2{
-    color: #d3bea3;
-    text-shadow: 2px 2px black, 3px 3px 2px black;
-    font-size: 45px;
-}
-
-.guide .box1{
-    height: 40px;
-    cursor: pointer;
+.guide .box{
+    height: 45px;
     background-image: none;
-    margin-top: 10px;
 }
 
-.box1 h2{
-    margin-top: 1px;
-    margin-left: 10px;
-    color: rgb(39, 162, 35);
-    display: inline-block;
-}
-
-.box1 img {
+.guide .box img{
     height: 20px;
     transform: rotate(90deg);
     float: right;
     margin-top: 15px;
     margin-right: 10px;
+}
+
+.guide .box h2{
+    display: inline-block;
+    margin: 10px 0px 20px 10px;
+    color: rgb(194, 138, 64);
+    text-shadow: 2px 2px black;
+}
+
+.guide .option{
+    background-image: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    padding: 0px;
+    border: none;
+    overflow: hidden;
+    height: auto;
+}
+
+.guide #option3{
+    margin-bottom: 100px;
 }
 
 .introduction{
@@ -96,8 +102,12 @@
 }
 
 .game-rules{
+    height: 0px;
+    display: none;
     background-image: radial-gradient(#DBAB72 40%,  #c78637 60%);
-    margin-bottom: 100px;
+    animation: dropDownEffect;
+    animation-duration: 1s;
+    margin-top: 10px;
 }
 
 .guide h2{
@@ -175,6 +185,7 @@ li span{
     top: 470px;
     background-image: none;
     border: none;
+    z-index: 999;
 }
 
 .floating-div button{
@@ -188,7 +199,87 @@ li span{
     background-color: #edcba1;
     cursor: pointer;
     margin: 10px;
+    z-index: 999;
 }
+
+.desktop-comands{
+    display: none;
+    animation-name: dropDownEffect;
+    animation-duration: 1s;
+}
+
+.numericKey{
+    display: flex;
+    align-items: center;
+    float: left;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.numericKey img{
+    height: 45px;
+}
+
+.numericKey .unique-line{
+    height: 9px;   
+}
+
+.click-exemple-img{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin-right: 10px;
+}
+
+.click-tip{
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.click-exemple-img img{
+    height: 150px;
+}
+
+.clean-boat-exemple{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clean-boat-exemple .arrow{
+    height: 15px;
+    margin: 15px 10px 10px 15px;
+    
+}
+
+.clean-boat-exemple .empty-boat-img{
+    margin-bottom: 15px;
+}
+
+.character-selection{
+    border: 2px solid black;
+}
+
+.clean-boat-exemple img{
+    height: 50px;
+}
+
+.boat-interaction p{
+    text-align: center;
+}
+
+.directional-keys{
+    width: fit-content;
+    float: left;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.directional-keys img{
+    height: 50px;
+}
+
 
 @keyframes guideIntro{
     0%{
@@ -197,5 +288,14 @@ li span{
     }
     100%{
         opacity: 100%;
+    }
+}
+
+@keyframes dropDownEffect{
+    0%{
+        transform: translatey(-500px);
+    }
+    100%{
+        transform: translatey(0px);
     }
 }

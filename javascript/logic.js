@@ -188,14 +188,14 @@ function resetGame(){
     location.reload()
 }
 
-// function interactionGuide(){
-//     let guideStatus = document.querySelector(".guide")
-//     if(guideStatus.style.display === "none"){
-//         guideStatus.style.display = "block"
-//     }else{
-//         guideStatus.style.display = "none"
-//     }
-// }
+function interactionGuide(){
+    let guideStatus = document.querySelector(".guide")
+    if(guideStatus.style.display === "none"){
+        guideStatus.style.display = "block"
+    }else{
+        guideStatus.style.display = "none"
+    }
+}
 
 addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight" || e.key=== "ArrowLeft"){
@@ -235,3 +235,51 @@ addEventListener("keydown", (e) => {
         }
 }
 )
+
+addEventListener("click", (e) => {
+    checkScreenWidth()
+    let content = 0;
+    classTarget = e.target.className
+    console.log(classTarget)
+    if (classTarget === "box"){
+        let idTarget = e.target.id
+        console.log("id = " + idTarget)
+        let elementById = document.querySelector(`#${idTarget}`)
+        let parent = elementById.parentElement
+        console.log("parent id= " + parent.id)
+        let childrens = parent.children
+        for (let i = 0; i < childrens.length; i++){
+            if (childrens[i].className != "box"){
+                content = childrens[i]
+                break
+            }
+        }
+        if (content != 0){
+            if (content.style.height != "auto"){
+                content.style.height = "auto"
+                content.style.display = "block"
+            } else{
+                console.log("true")
+                content.style.height = "0px"
+                content.style.display = "none"
+            }
+        }
+    }
+})
+
+function checkScreenWidth(){
+    let screenWidht = window.innerWidth
+    let screenHeight = window.innerHeight
+    let gameBackground = document.querySelector(".background")
+    let rotationBackground = document.querySelector(".rotation-screen")
+    if (screenWidht > 632){
+        gameBackground.style.display = "block"
+        rotationBackground.style.display = "none"
+    }
+    else{
+        rotationBackground.style.display = "block";
+        gameBackground.style.display = "none";
+} 
+}
+
+setInterval(checkScreenWidth, 1)
