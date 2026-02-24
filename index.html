@@ -32,7 +32,7 @@
     <div class="background">
         <header>
             <nav>
-                <a href="#"><img class="logo" src="/images/logo.png" alt=""></a>
+                <a href="#"><img onclick="resetGame()" class="logo" src="/images/logo.png" alt="" ></a>
                 <a href="#"><img class="menu-icon" src="/images/menu-icon.png" alt=""></a>
                 <img onclick="resetGame()" class="reestart" src="/images/reestart.png" alt="">
             </nav>
@@ -153,10 +153,13 @@
         <div class="position" id="position10"><img class = "tecla" src="/images/teclas/tecla4.png" alt=""></div>
         <div class="position" id="position11"><img class = "tecla" src="/images/teclas/tecla5.png" alt=""></div>
         <div class="position" id="position12"><img class = "tecla" src="/images/teclas/tecla6.png" alt=""></div>
-        <div class="interactive-div">
+        <div class="interactive-div" id="interactive-div-left">
             <div class="boat"><img src="/images/characters/Barco-gif.gif" alt=""></div>
             <div class="boat-position" id="bp1"></div>
             <div class="boat-position" id="bp2"></div>
+        </div>
+        <div class="interactive-div" id="interactive-div-right">
+            <!-- <h1>teste</h1> -->
         </div>
         <div class="help"><button onclick="interactionGuide()">?</button></div>
     </div> 

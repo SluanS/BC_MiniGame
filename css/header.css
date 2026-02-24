@@ -34,3 +34,9 @@ header nav{
     height: 50%;
     cursor: pointer;
 }
+
+@media only screen and (min-width: 603px) and (max-width:681px){
+    .reestart{
+        display: none;
+    }
+}

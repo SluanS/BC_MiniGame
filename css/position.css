@@ -5,6 +5,10 @@
     /* background-color: tomato; */
 }
 
+.background #interactive-div-right{
+    left: 880px;
+}
+
 #position1{
     left: 440px;
     bottom: 120px;
@@ -83,4 +87,597 @@
     height: 25px;
     margin-left: 30px;
     margin-top: -10px;
+}
+
+@media only screen and (min-width: 603px) and (max-width:681px){
+
+    .position, .boat-position{
+        height: 50px;
+        width: auto;
+    }
+    
+    #position1{
+        top: 225px;
+        left: 250px;
+    }
+    #position2{
+        top: 235px;
+        left: 225px;
+    }
+    #position3{
+        top: 225px;
+        left: 195px;
+    }
+    #position4{
+        top: 235px;
+        left: 160px;
+    }
+    #position5{
+        top: 225px;
+        left: 130px;
+    }
+    #position6{
+        top: 235px;
+        left: 100px;
+    }
+    
+    #position7{
+        height: 50px;
+        width: 45px;
+        top: 225px;
+        right: 195px;
+    }
+    #position8{
+        height: 50px;
+        width: 45px;
+        top: 235px;
+        right: 165px;
+    }
+    #position9{
+        height: 50px;
+        width: 45px;
+        top: 225px;
+        right: 130px;
+    }
+    #position10{
+        height: 50px;
+        width: 45px;
+        top: 235px;
+        right: 95px;
+    }
+    #position11{
+        height: 50px;
+        width: 45px;
+        top: 225px;
+        right: 60px;
+    }   
+    #position12{
+        height: 50px;
+        width: 45px;
+        top: 235px;
+        right: 20px;
+    }
+    
+    .tecla{
+        display: none;
+    }
+    
+    .background #interactive-div-right{
+        top: 260px;
+        left: 350px;
+    }
+
+    .background #interactive-div-left{
+        top: 260px;
+        left: 250px;
+    }
+    
+    .interactive-div{
+        height: fit-content;
+        width: fit-content;
+        height: 10px;
+        top: 270px;
+        left: 270px;
+    }
+    .boat-position{
+        height: 50px;
+        width: 45px;
+    }
+
+    .background img:active{
+        height: auto;
+    }
+
+}
+
+@media only screen and (min-width: 681px) and (max-width:741px){
+
+    .tecla{
+        display: none;
+    }
+    
+    .position, .boat-position{
+        height: 60px;
+        width: auto;
+        position: absolute;
+        /* background-color: tomato;
+        border: 2px solid black; */
+    }
+    
+    #bp1{
+        top: 20px;
+        right: 30px;
+    }
+
+    #bp2{
+        top: 20px;
+        right: -5px
+    }
+    
+     .background #interactive-div-left{
+            height: fit-content;
+            width: fit-content;
+            position: absolute;
+            top: 265px;
+            right: none;
+            left: 325px;
+            background-color: lemonchiffon;
+        }
+
+    .background #interactive-div-right{
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        top: 265px;
+        left: 450px;
+    }
+
+    #position1{
+        top: 230px;
+        left: 250px;
+    }
+    #position2{
+        top: 240px;
+        left: 215px;
+    }
+    #position3{
+         top: 230px;
+        left: 180px;
+    }
+    #position4{
+        top: 240px;
+        left: 145px;
+    }
+    #position5{
+        top: 245px;
+        left: 100px;
+    }
+    #position6{
+        top: 250px;
+        left: 65px;
+    }
+    
+    #position7{
+        height: 65px;
+        width: 45px;
+        top: 230px;
+        right: 205px;
+    }
+    #position8{
+        height: 65px;
+        width: 45px;
+        top: 240px;
+        right: 180px;
+    }
+    #position9{
+        height: 65px;
+        width: 45px;
+        top: 230px;
+        right: 130px;
+    }
+    #position10{
+        height: 65px;
+        width: 45px;
+        top: 240px;
+        right: 95px;
+    }
+    #position11{
+        height: 65px;
+        width: 45px;
+        top: 230px;
+        right: 60px;
+    }   
+    #position12{
+        height: 65px;
+        width: 45px;
+        top: 240px;
+        right: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 741px) and (max-width:841px){
+    
+    .tecla{
+        display: none;
+    }
+    
+    .position, .boat-position{
+        height: 60px;
+        width: auto;
+        position: absolute;
+    }
+    
+    #bp1{
+        top: 20px;
+        right: 30px;
+    }
+
+    #bp2{
+        top: 20px;
+        right: -5px
+    }
+    
+     .background #interactive-div-left{
+            height: fit-content;
+            width: fit-content;
+            position: absolute;
+            top: 300px;
+            right: none;
+            left: 325px;
+            background-color: lemonchiffon;
+        }
+
+    .background #interactive-div-right{
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        top: 300px;
+        left: 500px;
+    }
+
+    #position1{
+        top: 260px;
+        left: 250px;
+    }
+    #position2{
+        top: 270px;
+        left: 215px;
+    }
+    #position3{
+        top: 260px;
+        left: 180px;
+    }
+    #position4{
+        top: 275px;
+        left: 145px;
+    }
+    #position5{
+        top: 270px;
+        left: 100px;
+    }
+    #position6{
+        top: 275px;
+        left: 65px;
+    }
+    
+    #position7{
+        height: 65px;
+        width: 45px;
+        top: 265px;
+        right: 220px;
+    }
+    #position8{
+        height: 65px;
+        width: 45px;
+        top: 270px;
+        right: 180px;
+    }
+    #position9{
+        height: 65px;
+        width: 45px;
+        top: 275px;
+        right: 135px;
+    }
+    #position10{
+        height: 65px;
+        width: 45px;
+        top: 270px;
+        right: 95px;
+    }
+    #position11{
+        height: 65px;
+        width: 45px;
+        top: 275px;
+        right: 60px;
+    }   
+    #position12{
+        height: 65px;
+        width: 45px;
+        top: 270px;
+        right: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 841px) and (max-width:941px){
+        .tecla{
+        display: none;
+    }
+    
+    .position, .boat-position{
+        height: 60px;
+        width: auto;
+        position: absolute;
+    }
+    
+    #bp1{
+        top: 20px;
+        right: 30px;
+    }
+
+    #bp2{
+        top: 20px;
+        right: -5px
+    }
+    
+     .background #interactive-div-left{
+            height: fit-content;
+            width: fit-content;
+            position: absolute;
+            top: 345px;
+            right: none;
+            left: 325px;
+            background-color: lemonchiffon;
+        }
+
+    .background #interactive-div-right{
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        top: 345px;
+        left: 550px;
+    }
+
+    #position1{
+        top: 310px;
+        left: 250px;
+    }
+    #position2{
+        top: 305px;
+        left: 215px;
+    }
+    #position3{
+        top: 310px;
+        left: 180px;
+    }
+    #position4{
+        top: 310px;
+        left: 145px;
+    }
+    #position5{
+        top: 320px;
+        left: 100px;
+    }
+    #position6{
+        top: 320px;
+        left: 65px;
+    }
+    
+    #position7{
+        height: 65px;
+        width: 45px;
+        top: 305px;
+        right: 220px;
+    }
+    #position8{
+        height: 65px;
+        width: 45px;
+        top: 310px;
+        right: 180px;
+    }
+    #position9{
+        height: 65px;
+        width: 45px;
+        top: 305px;
+        right: 135px;
+    }
+    #position10{
+        height: 65px;
+        width: 45px;
+        top: 310px;
+        right: 95px;
+    }
+    #position11{
+        height: 65px;
+        width: 45px;
+        top: 320px;
+        right: 60px;
+    }   
+    #position12{
+        height: 65px;
+        width: 45px;
+        top: 315px;
+        right: 20px;
+    }
+}
+
+@media only screen and (min-width: 941px) and (max-width:1041px){
+   .tecla{
+        display: none;
+    }
+    
+    .position, .boat-position{
+        height: 70px;
+        width: auto;
+        position: absolute;
+    }
+    
+    #bp1{
+        top: 10px;
+        right: 45px;
+    }
+
+    #bp2{
+        top: 10px;
+        right: -5px
+    }
+    
+     .background #interactive-div-left{
+            position: absolute;
+            right: none;
+            top: 400px;
+            left: 400px;
+        }
+
+    .background #interactive-div-right{
+        position: absolute;
+        height: auto;
+        width: fit-content;
+        top: 400px;
+        left: 700px;
+        background-color: red;
+    }
+
+    #position1{
+        top: 350px;
+        left: 300px;
+    }
+    #position2{
+        top: 360px;
+        left: 250px;
+    }
+    #position3{
+        top: 350px;
+        left: 200px;
+    }
+    #position4{
+        top: 355px;
+        left: 150px;
+    }
+    #position5{
+        top: 370px;
+        left: 100px;
+    }
+    #position6{
+        top: 365px;
+        left: 50px;
+    }
+    
+    #position7{
+        height: 70px;
+        width: 45px;
+        top: 340px;
+        right: 340px;
+    }
+    #position8{
+        height: 70px;
+        width: 45px;
+        top: 345px;
+        right: 290px;
+    }
+    #position9{
+        height: 70px;
+        width: 45px;
+        top: 340px;
+        right: 240px;
+    }
+    #position10{
+        height: 70px;
+        width: 45px;
+        top: 345px;
+        right: 190px;
+    }
+    #position11{
+        height: 70px;
+        width: 45px;
+        top: 350px;
+        right: 140px;
+    }   
+    #position12{
+        height: 70px;
+        width: 45px;
+        top: 345px;
+        right: 90px;
+    }
+}
+
+@media only screen and (min-width: 1041px) and (max-width:1300px){
+
+    .background #interactive-div-left{
+            position: absolute;
+            right: none;
+            top: 450px;
+            left: 380px;
+        }
+
+    .background #interactive-div-right{
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        top: 450px;
+        left: 600px;
+    }
+    
+    #position1{
+        top: 400px;
+        left: 340px;
+    }
+    #position2{
+        top: 410px;
+        left: 290px;
+    }
+    #position3{
+        top: 400px;
+        left: 240px;
+    }
+    #position4{
+        top: 410px;
+        left: 190px;
+    }
+    #position5{
+        top: 420px;
+        left: 140px;
+    }
+    #position6{
+        top: 420px;
+        left: 90px;
+    }
+    
+    #position7{
+        height: 90px;
+        width: 45px;
+        top: 400px;
+        right: 340px;
+    }
+    #position8{
+        height: 90px;
+        width: 45px;
+        top: 410px;
+        right: 290px;
+    }
+    #position9{
+        height: 90px;
+        width: 45px;
+        top: 400px;
+        right: 240px;
+    }
+    #position10{
+        height: 90px;
+        width: 45px;
+        top: 410px;
+        right: 190px;
+    }
+    #position11{
+        height: 90px;
+        width: 45px;
+        top: 420px;
+        right: 140px;
+    }   
+    #position12{
+        height: 90px;
+        width: 45px;
+        top: 420px;
+        right: 90px;
+    }
 }

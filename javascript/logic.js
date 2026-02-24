@@ -16,7 +16,6 @@ document.addEventListener("click", (e) => {
             }
             else if (target.parentElement.className === "position") {
                 placeInBoat(target)
-            
             }
         }
     }
@@ -75,19 +74,26 @@ function sendBoat(){
         }
     }
     if (theresPassenger){
+        let rightId = document.querySelector("#interactive-div-right")
+        let leftId = document.querySelector("#interactive-div-left")
         if (boat.direction === "left"){
             boat.direction = "right"
-            boat.boatDiv.style.left = "900px"
-            document.querySelector(".pointer-left").style.display =  "inline-block"
-            document.querySelector(".pointer-right").style.display =  "none"
+            let leftIdChild = leftId.children
+            while (leftIdChild.length > 0){
+                let node = leftIdChild[0]
+                rightId.appendChild(node)
+            }
             gameRules()
 
         }
         else if(boat.direction === "right"){
             boat.direction = "left"
-            boat.boatDiv.style.left = "500px"
-            document.querySelector(".pointer-left").style.display =  "none"
-            document.querySelector(".pointer-right").style.display =   "inline-block"
+            let rightIdChild = rightId.children
+            while (rightIdChild.length > 0){
+                let node = rightIdChild[0]
+                leftId.appendChild(node)
+            }
+            
             gameRules()
         }
     }
@@ -96,7 +102,6 @@ function sendBoat(){
 }
 
 function cleanBoat(){
-    console.log("start")
     bps = document.querySelectorAll(".boat-position")
     for (let i = 0; i < bps.length; i++){
         innerImage = bps[i].children 
@@ -134,7 +139,6 @@ function gameRules(){
     }
     for (let bp = 0; bp < boatPositions.length; ++bp){
         inBoat = boatPositions[bp].children
-        console.log("bp = "+bp)
         if (inBoat.length > 0){
             if (boat.direction === "left"){
                 if (inBoat[0].className === "cani"){
@@ -243,7 +247,6 @@ addEventListener("click", (e) => {
     console.log(classTarget)
     if (classTarget === "box"){
         let idTarget = e.target.id
-        console.log("id = " + idTarget)
         let elementById = document.querySelector(`#${idTarget}`)
         let parent = elementById.parentElement
         console.log("parent id= " + parent.id)
@@ -269,7 +272,7 @@ addEventListener("click", (e) => {
 
 function checkScreenWidth(){
     let screenWidht = window.innerWidth
-    let screenHeight = window.innerHeight
+
     let gameBackground = document.querySelector(".background")
     let rotationBackground = document.querySelector(".rotation-screen")
     if (screenWidht > 632){
