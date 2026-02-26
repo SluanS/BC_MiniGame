@@ -179,7 +179,7 @@ function gameRules(){
    
     if (gameOver){
         document.querySelector(".controll").style.display = "none"
-        document.querySelector(".fundo-go").style.display = "block"
+        document.querySelector(".fundo-go").style.display = "flex"
     }
 }
 

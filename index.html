@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <p>Você vence quando todos os <span>TODOS OS 6</span> individuos atravessarem para a outra margem.</p> 
-                </div>    
+                </div>  
             </div>
             <div class="option" id="option2">
                     <div class="box" id="box2">
@@ -132,6 +132,23 @@
                         <p>Para mover o barco entre as margens, basta utilizar as teclas direcionais do seu teclado. certifique-se de que haja ao menos um tripulante no barco para que a movimentação do barco entre as margens seja habilitada.</p>
                     </div>
                     </div>
+                </div>
+                    <div class="option" id="option3">
+                        <div class="box" id="box3">
+                                <h2>Comandos em mobile</h2>
+                                <img src="/images/maior-que.png" alt="">
+                            </div>
+                            <div class="mobile-guide">
+                                <p><span>Comandos em dispositivos mobile</span></p>
+                                <p>Em dispositivos moveis, seu principal meio de interação será através do controle de central exibido no centro da tela.</p>
+                                <div class="controll-illustration-div">
+                                    <img class="controll-illustration-img" src="/images/guide.img/controll-illustration.png" alt="">
+                                </div>
+                            <ul>
+                                <li>Utilize das setas direcionais para mover o barco</li>
+                                <li>Clique no botão circular central para limpar o barco</li>
+                            </ul>
+                            </div>
                     </div>
             </div>
         <div class="position" id="position1"><img class = "tecla" src="/images/teclas/tecla1.png" alt=""><img class="cani" id="char1" src="/images/characters/Drake.gif" alt=""></div>
@@ -152,27 +169,28 @@
             <div class="boat-position" id="bp2"></div>
         </div>
         <div class="interactive-div" id="interactive-div-right">
-            <!-- <h1>teste</h1> -->
         </div>
         <div class="help"><button onclick="interactionGuide()">?</button></div>
     </div> 
-    <div class="controll">
-        <img onclick="sendBoat()" class="pointer-left" src="/images/controls/pointer-left.png" alt="">
-        <img onclick="cleanBoat()" class="central-circle"src="/images/controls/central-circle.png" alt="">
-        <img onclick="sendBoat()" class="pointer-right"src="/images/controls/pointer-right.png" alt="">
+    <div class="controll-main-div">
+        <div class="controll">
+            <img onclick="sendBoat()" class="pointer-left" src="/images/controls/pointer-left.png" alt="">
+            <img onclick="cleanBoat()" class="central-circle"src="/images/controls/central-circle.png" alt="">
+            <img onclick="sendBoat()" class="pointer-right"src="/images/controls/pointer-right.png" alt="">
+        </div>
     </div>
         <div class="fundo-go">
             <div class="game-over">
-            <button onclick="closeWindow()" class="close-button" type="button" aria-label="Close">X</button>
-            <img src="#" alt="">
-            <img src="#" alt="">
-            <img src="#" alt="">
-            <h1>Game Over</h1>
-            <h2>Menssagem rotativa</h2>
-            <h3>Tentar de novo?</h3>
-            <button onclick="resetGame()" class="alternative">Sim</button>
-            <button onclick="closeWindow()" class="alternative">Não</button>
-        </div>
+                <button onclick="closeWindow()" class="close-button" type="button" aria-label="Close">X</button>
+                <img src="#" alt="">
+                <img src="#" alt="">
+                <img src="#" alt="">
+                <h1>Game Over</h1>
+                <h2>Menssagem rotativa</h2>
+                <h3>Tentar de novo?</h3>
+                <button onclick="resetGame()" class="alternative">Sim</button>
+                <button onclick="closeWindow()" class="alternative">Não</button>
+            </div>
         </div>
 </body>
 </html>

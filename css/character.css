@@ -21,7 +21,6 @@
     width: 190px;
 }
 
-
 @media only screen and (min-width: 603px) and (max-width:681px){
     .boat{
         left: -25px;
@@ -64,12 +63,15 @@
 @media only screen and (min-width: 841px) and (max-width:941px){
     .boat{
         right: -15px;
+        height: 20px;
+        margin-top: 15px;
     }
 
     .boat img{
         width: auto;
         height: 45px;
         margin: 0px;
+        margin-top: -10px;
         
     }
 }

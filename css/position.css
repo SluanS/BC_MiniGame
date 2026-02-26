@@ -2,7 +2,6 @@
     height: 100px;
     width: 80px;
     position: absolute;
-    /* background-color: tomato; */
 }
 
 .background #interactive-div-right{
@@ -88,6 +87,7 @@
     margin-left: 30px;
     margin-top: -10px;
 }
+
 
 @media only screen and (min-width: 603px) and (max-width:681px){
 
@@ -220,7 +220,6 @@
             top: 265px;
             right: none;
             left: 325px;
-            background-color: lemonchiffon;
         }
 
     .background #interactive-div-right{
@@ -260,7 +259,7 @@
         height: 65px;
         width: 45px;
         top: 230px;
-        right: 205px;
+        right: 225px;
     }
     #position8{
         height: 65px;
@@ -601,7 +600,7 @@
     }
 }
 
-@media only screen and (min-width: 1041px) and (max-width:1300px){
+@media only screen and (min-width: 1041px) and (max-width:1100px){
 
     .background #interactive-div-left{
             position: absolute;
@@ -619,64 +618,300 @@
     }
     
     #position1{
-        top: 400px;
+        top: 360px;
         left: 340px;
     }
     #position2{
-        top: 410px;
+        top: 370px;
         left: 290px;
     }
     #position3{
-        top: 400px;
+        top: 360px;
         left: 240px;
     }
     #position4{
-        top: 410px;
+        top: 370px;
         left: 190px;
     }
     #position5{
-        top: 420px;
+        top: 360px;
         left: 140px;
     }
     #position6{
-        top: 420px;
+        top: 370px;
         left: 90px;
     }
     
     #position7{
         height: 90px;
         width: 45px;
-        top: 400px;
+        top: 370px;
         right: 340px;
     }
     #position8{
         height: 90px;
         width: 45px;
-        top: 410px;
+        top: 360px;
         right: 290px;
     }
     #position9{
         height: 90px;
         width: 45px;
-        top: 400px;
+        top: 370px;
         right: 240px;
     }
     #position10{
         height: 90px;
         width: 45px;
-        top: 410px;
+        top: 380px;
         right: 190px;
     }
     #position11{
         height: 90px;
         width: 45px;
-        top: 420px;
+        top: 370px;
         right: 140px;
     }   
     #position12{
         height: 90px;
         width: 45px;
-        top: 420px;
+        top: 370px;
         right: 90px;
+    }
+}
+
+
+
+@media only screen and (min-width: 1100px) and (max-width:1200px){
+    .background #interactive-div-left{
+            position: absolute;
+            right: none;
+            top: 600px;
+            left: 380px;
+        }
+
+    .background #interactive-div-right{
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        top: 600px;
+        left: 750px;
+    }
+    #position1{
+        top: 370px;
+        left: 370px;
+    }
+    #position2{
+        top: 375px;
+        left: 320px;
+    }
+    #position3{
+        top: 370px;
+        left: 270px;
+    }
+    #position4{
+        top: 380px;
+        left: 200px;
+    }
+    #position5{
+        top: 380px;
+        left: 150px;
+    }
+    #position6{
+        top: 390px;
+        left: 100px;
+    }
+    
+    #position7{
+        height: 110px;
+        width: 45px;
+        top: 380px;
+        right: 380px;
+    }
+    #position8{
+        height: 110px;
+        width: 45px;
+        top: 380px;
+        right: 320px;
+    }
+    #position9{
+        height: 110px;
+        width: 45px;
+        top: 390px;
+        right: 275px;
+    }
+    #position10{
+        height: 110px;
+        width: 45px;
+        top: 395px;
+        right: 225px;
+    }
+    #position11{
+        height: 110px;
+        width: 45px;
+        top: 395px;
+        right: 175px;
+    }   
+    #position12{
+        height: 110px;
+        width: 45px;
+        top: 395px;
+        right: 125px;
+    }
+}   
+
+@media only screen and (min-width: 1200px) and (max-width:1400px){
+.background #interactive-div-left{
+            position: absolute;
+            right: none;
+            top: 550px;
+            left: 380px;
+        }
+
+    .background #interactive-div-right{
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        top: 550px;
+        left: 750px;
+    }
+    #position1{
+        top: 420px;
+        left: 450px;
+    }
+    #position2{
+        top: 425px;
+        left: 400px;
+    }
+    #position3{
+        top: 450px;
+        left: 350px;
+    }
+    #position4{
+        top: 450px;
+        left: 290px;
+    }
+    #position5{
+        top: 455px;
+        left: 220px;
+    }
+    #position6{
+        top: 460px;
+        left: 150px;
+    }
+    
+    #position7{
+        height: 110px;
+        width: 45px;
+        top: 450px;
+        right: 490px;
+    }
+    #position8{
+        height: 110px;
+        width: 45px;
+        top: 450px;
+        right: 420px;
+    }
+    #position9{
+        height: 110px;
+        width: 45px;
+        top: 455px;
+        right: 360px;
+    }
+    #position10{
+        height: 110px;
+        width: 45px;
+        top: 470px;
+        right: 290px;
+    }
+    #position11{
+        height: 110px;
+        width: 45px;
+        top: 470px;
+        right: 230px;
+    }   
+    #position12{
+        height: 110px;
+        width: 45px;
+        top: 470px;
+        right: 160px;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width:1700px){
+    .background #interactive-div-left{
+            position: absolute;
+            right: none;
+            top: 600px;
+            left: 380px;
+        }
+
+    .background #interactive-div-right{
+        position: absolute;
+        height: fit-content;
+        width: fit-content;
+        top: 600px;
+        left: 750px;
+    }
+    #position1{
+        top: 520px;
+        left: 490px;
+    }
+    #position2{
+        top: 510px;
+        left: 410px;
+    }
+    #position3{
+        top: 520px;
+        left: 350px;
+    }
+    #position4{
+        top: 540px;
+        left: 290px;
+    }
+    #position5{
+        top: 530px;
+        left: 220px;
+    }
+    #position6{
+        top: 540px;
+        left: 150px;
+    }
+    
+    #position7{
+        height: 110px;
+        width: 45px;
+        top: 500px;
+        right: 490px;
+    }
+    #position8{
+        height: 110px;
+        width: 45px;
+        top: 510px;
+        right: 420px;
+    }
+    #position9{
+        height: 110px;
+        width: 45px;
+        top: 520px;
+        right: 360px;
+    }
+    #position10{
+        height: 110px;
+        width: 45px;
+        top: 530px;
+        right: 290px;
+    }
+    #position11{
+        height: 110px;
+        width: 45px;
+        top: 540px;
+        right: 230px;
+    }   
+    #position12{
+        height: 110px;
+        width: 45px;
+        top: 530px;
+        right: 160px;
     }
 }

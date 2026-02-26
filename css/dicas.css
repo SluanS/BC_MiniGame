@@ -50,8 +50,28 @@
     height: auto;
 }
 
-.guide #option2{
+.guide #option3{
     margin-bottom: 100px;
+}
+
+#option3 .controll-illustration-div{
+    background-image: none;
+    background-color: white;
+    height: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#option3 .controll-illustration-img{
+    height: 50px;
+    transform: rotate(180deg);
+}
+
+.mobile-guide{
+    animation-name: dropDownEffect;
+    animation-duration: 1s;
 }
 
 .introduction{

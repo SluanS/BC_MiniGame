@@ -70,11 +70,38 @@ h1{
         transform: scale(1);
     }
 }
+
+@media only screen and (max-height: 360px){
+    
+    .background{
+        padding-bottom: 150px;
+    }
+}
+
+@media only screen and (min-height:360px)and (max-height: 430px){
+
+    body{
+        background-color: #1B4C7D;
+    }
+    
+    .background{
+        padding-bottom: 150px;
+    }
+}
+
+@media only screen and (min-height:430px) and (max-height: 550px){
+     .background{
+        padding-bottom: 400px;
+    }
+}
 @media only screen and (min-width: 603px) and (max-width:681px){
+
+    body{
+        background-color: #1B4C7D;
+    }
 
     .background{
         width: 100%;
-        /* height: 57vh; */
         background-size: contain;
     }
     .background h1{
@@ -92,6 +119,11 @@ h1{
 
 
 @media only screen and (min-width: 681px) and (max-width:741px){
+
+    body{
+        background-color: #1B4C7D;
+    }
+
     .background{
         width: 100%;
         background-size: contain;
@@ -151,5 +183,11 @@ h1{
     .help{
         bottom: 0px;
         top: 600px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width:1400px){
+    .background{
+        background-size: contain;
     }
 }
