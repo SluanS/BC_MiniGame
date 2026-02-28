@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+.menu-base-div{
+    font-family: "Pixelify Sans", sans-serif;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 995;
+    top: 0px;
+}
+
+.menu-div{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-image: url("/images/wood.png");
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 10px 10px 10px black;
+}
+
+.menu-div h2{
+    float: left;
+    font-size: 50px;
+    /* text-align: center; */
+    margin-bottom: -10px;
+    margin-top: 0px;
+    margin-left: 10px;
+    color: black;
+    text-shadow: 2px 1px 1px rgb(215, 205, 180);
+}
+
+.menu-options-div{
+    display: flex;
+    align-self: center;
+}
+
+.menu-option{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.menu-option:hover {
+    color: white;
+}
+
+.menu-options-div a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu-options-div p{
+    /* color: rgb(0, 255, 55); */
+    margin-top: 5px;
+}
+
+.menu-options-div p:hover{
+    color: white;
+}
+
+
+.menu-div img{
+    height: 100px;
+    background-image: radial-gradient(#DBAB72 40%,  #c78637 60%);
+    border-radius: 10px;
+}
+
+.close-menu-button{
+    font-family: "Pixelify Sans", sans-serif;
+    height: 30px; 
+    width: 30px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 100%;
+    background-color: #DBAB72;
+    float: right;
+    align-self: flex-end;
+    margin-top: -15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.close-menu-button:hover{
+    background-color: white;
+    color: #7c360f;
+}

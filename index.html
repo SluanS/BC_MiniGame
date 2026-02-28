@@ -29,11 +29,12 @@
             <p>Gire seu telefone para jogar</p>
         </div>
     </div>
+    
     <div class="background">
         <header>
             <nav>
                 <a href="#"><img onclick="resetGame()" class="logo" src="/images/logo.png" alt="" ></a>
-                <a href="#"><img class="menu-icon" src="/images/menu-icon.png" alt=""></a>
+                <a href="#"><img onclick="interactionMenu()" class="menu-icon" src="/images/menu-icon.png" alt=""></a>
                 <img onclick="resetGame()" class="reestart" src="/images/reestart.png" alt="">
             </nav>
         </header>
@@ -151,7 +152,7 @@
                             </div>
                     </div>
             </div>
-        <div class="position" id="position1"><img class = "tecla" src="/images/teclas/tecla1.png" alt=""><img class="cani" id="char1" src="/images/characters/Drake.gif" alt=""></div>
+        <div class="position" id="position1"><img class = "tecla" src="/images/teclas/tecla1.png" alt=""><img class="cani" id="char1" src="/images/characters/Dona_docura.gif" alt=""></div>
         <div class="position" id="position2"><img class = "tecla" src="/images/teclas/tecla2.png" alt=""><img class="cani" id="char2" src="/images/characters/Jefrey.gif" alt=""></div>
         <div class="position" id="position3"><img class = "tecla" src="/images/teclas/tecla3.png" alt=""><img class="cani" id="char3" src="/images/characters/Canibal Lecter.gif" alt=""></div>
         <div class="position" id="position4"><img class = "tecla" src="/images/teclas/tecla4.png" alt=""><img class="miss" id="char4" src="/images/characters/Nun.gif" alt=""></div>
@@ -192,5 +193,65 @@
                 <button onclick="closeWindow()" class="alternative">Não</button>
             </div>
         </div>
+        <div class="base-char-info-div">
+        <div class="character-info-div">
+            <button onclick="interactionCharInfo()">X</button>
+            <button onclick="interactionCharInfo()" class="start-game-button">Voltar ao jogo</button>
+            <h1>Conheça os personagens:</h1>
+            <h2>Canibais:</h2>
+            <div class="cani-info">
+                <div class="char-card-info">
+                    <h3>H. Lecter</h3>
+                    <img src="/images/characters/Canibal Lecter.gif" alt="">
+                    <p>Sua aparência pode ser sinistra, mas H. Lecter é um indivíduo de trejeitos rebuscados. Valoriza literatura classica, vinhos Finos, conversas profundas e... gente. </p>   
+                </div>
+                <div class="char-card-info">
+                    <h3>Dona doçura</h3>
+                    <img src="/images/characters/Dona_docura.gif" alt="">
+                    <p>A primeira vista, tudo que se percebe sobre dona doçura é uma senhorinha de fala mansa e rosto gentil. Mas não se engane, por trás da imagem de boa senhora existe uma mulher paciente, sempre alimentando suas vitimas com as mais saborosas guoloseimas, tudo para deixa-las rechoncudas o suficiente para que no fim seja Dona doçura a ultima a se servir. <br> Dizem que crianças que se perdem dos pais são seus alvos preferidos.</p>
+                </div>
+                <div class="char-card-info">
+                    <h3>Jefrey D.</h3>
+                    <img src="/images/characters/Jefrey.gif" alt="">
+                    <p> Vindo diretamente das Américas, Jefrey não encontrou dificuldade alguma ao se adaptar aos habitantes da ilha e a sua dieta desconcertante. Basta conhecê-lo melhor para saber que o lugar dele é entre os bárbaros, bem longe da civilização comedora de salada.</p>
+                </div>
+            </div>
+            <h2>Missionários:</h2>
+            <div class="miss-info">
+                <div class="char-card-info">
+                    <h3>Irmã M. Eunice</h3>
+                    <img src="/images/characters/Nun.gif" alt="">
+                    <p> A ingenua e doce irmã M. Eunice é uma das fieis mais devotas que você conhecerá. Suas colegas freiras costumam dizer que ela passa mais tempo rezando pelos necessitados do que pensando.</p>
+                </div>
+                <div class="char-card-info">
+                    <h3>Cardial Toninho</h3>
+                    <img src="/images/characters/Cardial.gif" alt="">
+                    <p>Tão veemente quanto rigoroso, o cardeal Toninho possui mais de mil catequizações em seu currículo. Para o cardeal, falhar em levar os ensinamentos divinos não é uma opção, é uma sentença de morte.</p>
+                </div>
+                <div class="char-card-info">
+                    <h3>Bispo Leopoldo XV</h3>
+                    <img src="/images/characters/Pope.gif" alt="">
+                    <p> O bispo enfrentou as mais diversas adversidades durante o periodo que exerceu sua função, mas nenhuma delas foi tão dificil do que estar usando tantas camadas de roupas cerimoniais em uma ilha de clima tropical. </p>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-base-div">
+    <div class="menu-div">
+        <h2>Menu</h2>
+        <button onclick="interactionMenu()" class="close-menu-button">X</button>
+        <div class="menu-options-div">
+            <div class="menu-option">
+                <img onclick="interactionCharInfo()" class="generic-char-icon" src="/images/generic-icon-char.png" alt="">
+                <p>Personagens</p>
+            </div>
+            <a target="_blank" href="https://www.linkedin.com/in/luan-silva-developer">
+                <div class="menu-option">
+                    <img class="linkedin-icon" src="/images/Linkedin-icon.png" alt="">
+                    <p>Meu Linkedin</p>
+                </div>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

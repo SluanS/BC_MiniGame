@@ -183,6 +183,33 @@ function gameRules(){
     }
 }
 
+function interactionCharInfo(){
+    console.log("ativado")
+    let charInfoElement = document.querySelector(".base-char-info-div")
+
+    if (charInfoElement.style.display === "none"){
+        charInfoElement.style.display = "flex" 
+    }
+     else if(charInfoElement.style.display === ""){
+        charInfoElement.style.display = "flex" 
+    }
+    else{
+        charInfoElement.style.display = "none" 
+    }
+}
+
+function interactionMenu(){
+    let menuElement = document.querySelector(".menu-base-div")
+    if (menuElement.style.display === "none"){
+        menuElement.style.display = "flex"   
+    }
+    else if(menuElement.style.display === ""){
+        menuElement.style.display = "flex"      
+    }
+    else{
+        menuElement.style.display = "none" 
+    }
+}
 
 function closeWindow(){
     document.querySelector(".fundo-go").style.display = "none"
