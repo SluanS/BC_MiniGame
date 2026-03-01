@@ -4,7 +4,7 @@ body{
 }
 
 header{
-    background-image: url("/images/header-background.png");
+    background-image: url("/images/background/header-background.png");
     background-size: 10px;
     height: 70px;
     width: 100%;
@@ -27,7 +27,7 @@ header nav{
     margin-right: 100px;
     height: 50%;
 }
-.reestart{
+.restart{
     float: right;
     margin-right: -90px;
     margin-top: 20px;
@@ -36,7 +36,7 @@ header nav{
 }
 
 @media only screen and (min-width: 603px) and (max-width:681px){
-    .reestart{
+    .restart{
         display: none;
     }
 }

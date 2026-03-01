@@ -1,37 +1,22 @@
-let boatPositions = document.querySelectorAll(".boat-position");
 let boat = {
     direction: "left",
-    freePlaces: 2,
     boatDiv: document.querySelector(".interactive-div")
 }
+let allPositions = document.querySelectorAll(".position")
+let boatPositions = document.querySelectorAll(".boat-position")
 let gameOver = false;
-
-document.addEventListener("click", (e) => {
-
-    let target = e.target
-    if (boat.direction != "stoped"){
-        if (target.className === "cani" || target.className === "miss"){
-            if (target.parentElement.className === "boat-position"){  
-                removeFromBoat(target)
-            }
-            else if (target.parentElement.className === "position") {
-                placeInBoat(target)
-            }
-        }
-    }
-}
-)
 
 function placeInBoat(image){
     let parentId = image.parentElement.id
     let n = parentId.replace(/[^0-9]/g, "")
+    const HALF = allPositions.length / 2
 
-    if (n > 6 && boat.direction === "left") return
+    if (n > HALF && boat.direction === "left") return
 
-    if(n <= 6 && boat.direction === "right") return
+    if(n <= HALF && boat.direction === "right") return
 
     for (let i = 0; i < boatPositions.length; i++ ){
-        bp = boatPositions[i]
+        let bp = boatPositions[i]
         let ch = bp.children
         if (ch.length === 0){
             image.remove()
@@ -41,8 +26,7 @@ function placeInBoat(image){
 }
 
 function removeFromBoat(image){
-    if (boat.direction == "left"){
-        allPositions = document.querySelectorAll(".position")
+    if (boat.direction === "left"){
         for (let i = 0; i < 6; i++){
             let position = allPositions[i]
             if(position.children.length === 1){
@@ -53,7 +37,6 @@ function removeFromBoat(image){
         }
     }
     else if (boat.direction == "right"){
-        allPositions = document.querySelectorAll(".position")
         for (let i = 6; i < 12; i++){
             let position = allPositions[i]
             if(position.children.length === 1){
@@ -102,9 +85,9 @@ function sendBoat(){
 }
 
 function cleanBoat(){
-    bps = document.querySelectorAll(".boat-position")
+    let bps = document.querySelectorAll(".boat-position")
     for (let i = 0; i < bps.length; i++){
-        innerImage = bps[i].children 
+        let innerImage = bps[i].children 
         if (innerImage.length > 0){
             removeFromBoat(innerImage[0]) 
         }
@@ -112,79 +95,80 @@ function cleanBoat(){
 }
 
 function gameRules(){
-    let caniInRight = 0;
-    let caniInLeft = 0;
-    let missInRight = 0;
-    let missInLeft = 0;
-    let allPositions = document.querySelectorAll(".position")
-    let boatPositions = document.querySelectorAll(".boat-position")
+    let caniRight = 0;
+    let caniLeft = 0;
+    let missRight = 0;
+    let missLeft = 0;
+    let victory;
     for (let i = 0; i < allPositions.length; i++){
-        childrens = allPositions[i].children
+        let childrens = allPositions[i].children
         for (let c = 0; c < childrens.length; c++)
             if (i < 6){ 
                 if (childrens[c].className === "cani"){
-                    caniInLeft += 1;
+                    caniLeft += 1;
                 }
                 else if (childrens[c].className === "miss"){
-                    missInLeft += 1;
+                    missLeft += 1;
                 }
             } else{
                    if (childrens[c].className === "cani"){
-                    caniInRight += 1;
+                    caniRight += 1;
                 }
                 else if (childrens[c].className === "miss"){
-                    missInRight += 1;
+                    missRight += 1;
                 }
             }
     }
     for (let bp = 0; bp < boatPositions.length; ++bp){
-        inBoat = boatPositions[bp].children
+        let inBoat = boatPositions[bp].children
         if (inBoat.length > 0){
             if (boat.direction === "left"){
                 if (inBoat[0].className === "cani"){
-                    caniInLeft += 1;
+                    caniLeft += 1;
                 } else if(inBoat[0].className === "miss"){
-                    missInLeft += 1;
+                    missLeft += 1;
                 }
             }
             else if(boat.direction === "right"){
                   if (inBoat[0].className === "cani"){
-                    caniInRight += 1;
+                    caniRight += 1;
                 } else if(inBoat[0].className === "miss"){
-                    missInRight += 1;
+                    missRight += 1;
                 }
             }
         }
     }
     
-    console.log("Missionários na esquerda: " + missInLeft)
-    console.log("Canibais na esquerda: " + caniInLeft)
-    console.log("Missionários na direita: " + missInRight)
-    console.log("Canibais na direita: " + caniInRight)
-    console.log("----------------------------------------")
-    let CharatersInLeft = missInLeft + caniInLeft;
-    let CharatersInRight = missInRight + caniInRight;
-    document.querySelector(".contador").innerHTML = `${CharatersInRight}/6`
-    if (missInLeft > 0 && missInRight > 0){
-        console.log("primeira condicional")
-        if(CharatersInLeft > 0 && CharatersInRight > 0){
-        if (missInLeft < caniInLeft || missInRight < caniInRight){
-            console.log("game-over")
+    let charatersInLeft = missLeft + caniLeft;
+    let charatersInRight = missRight + caniRight;
+    updateCounter(charatersInRight)
+    if (missLeft > 0 && missRight > 0){
+        if(charatersInLeft > 0 && charatersInRight > 0){
+        if (missLeft < caniLeft || missRight < caniRight){
             gameOver = true
-            boat.direction = "stoped"
-            document.querySelector(".main-header").innerHTML = "Game Over"
+            boat.direction = "stopped"
+
         }
     }
     }
    
     if (gameOver){
-        document.querySelector(".controll").style.display = "none"
-        document.querySelector(".fundo-go").style.display = "flex"
+        victory = false
+        ShowgameOver(victory)
+
+    } else if(charatersInRight === 6){
+        victory = true
+        boat.direction = "stopped"
+        gameOver = true
+        ShowgameOver(victory)
     }
 }
 
+function updateCounter(number){
+    document.querySelector(".contador").innerHTML = `${number}/6`
+}
+
 function interactionCharInfo(){
-    console.log("ativado")
     let charInfoElement = document.querySelector(".base-char-info-div")
 
     if (charInfoElement.style.display === "none"){
@@ -212,7 +196,7 @@ function interactionMenu(){
 }
 
 function closeWindow(){
-    document.querySelector(".fundo-go").style.display = "none"
+    document.querySelector(".overlay-go").style.display = "none"
 }
 
 function resetGame(){
@@ -223,79 +207,14 @@ function interactionGuide(){
     let guideStatus = document.querySelector(".guide")
     if(guideStatus.style.display === "none"){
         guideStatus.style.display = "block"
-    }else{
+        
+    } else if(guideStatus.style.display === ""){
+        guideStatus.style.display = "block"
+    }
+    else{
         guideStatus.style.display = "none"
     }
 }
-
-addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight" || e.key=== "ArrowLeft"){
-        sendBoat()
-    }
-})
-
-addEventListener("keydown", (e)=> {
-    if (e.key === " "){
-        cleanBoat()
-    }
-})
-
-addEventListener("keydown", (e) => {
-    pressed = e.key
-    if (!gameOver){
-        allPosition = document.querySelectorAll(".position")
-        if (parseInt(pressed) > 6){
-                return
-        }
-            for (let i = 0; i < allPosition.length; i++){
-                let n = allPosition[i].id.replace(/[^0-9]/g, "")
-                if (boat.direction === "right"){
-                    pressed = parseInt(e.key) + 6;
-                }
-                if (pressed == n){
-                    children = allPosition[i].children
-                    for (let j = 0; j < children.length;j++){
-                        if (children[j].className != "tecla"){
-                            placeInBoat(children[j])
-                            
-                        }
-                    }
-                
-                }
-            }
-        }
-}
-)
-
-addEventListener("click", (e) => {
-    checkScreenWidth()
-    let content = 0;
-    classTarget = e.target.className
-    console.log(classTarget)
-    if (classTarget === "box"){
-        let idTarget = e.target.id
-        let elementById = document.querySelector(`#${idTarget}`)
-        let parent = elementById.parentElement
-        console.log("parent id= " + parent.id)
-        let childrens = parent.children
-        for (let i = 0; i < childrens.length; i++){
-            if (childrens[i].className != "box"){
-                content = childrens[i]
-                break
-            }
-        }
-        if (content != 0){
-            if (content.style.height != "auto"){
-                content.style.height = "auto"
-                content.style.display = "block"
-            } else{
-                console.log("true")
-                content.style.height = "0px"
-                content.style.display = "none"
-            }
-        }
-    }
-})
 
 function checkScreenWidth(){
     let screenWidht = window.innerWidth
@@ -312,4 +231,92 @@ function checkScreenWidth(){
 } 
 }
 
-setInterval(checkScreenWidth, 1)
+function ShowgameOver(victory){
+
+    if (victory){
+        let gameOverh1 = document.querySelector(".game-over h1")
+        gameOverh1.innerHTML = "Você conseguiu!"
+        gameOverh1.style.color = "green"
+        gameOverh1.style.fontSize = "55px;"
+        document.querySelector(".game-over h2").innerHTML = "Todos atrevessaram para a outra margem"
+        document.querySelector(".game-over h3").innerHTML = "Deseja tentar mais uma vez?"
+    }
+    else{
+        document.querySelector(".main-header").innerHTML = "Game Over"
+    }
+    document.querySelector(".controll").style.display = "none"
+    document.querySelector(".overlay-go").style.display = "flex"
+
+}
+
+addEventListener("keydown", (e) => {
+    
+    if (e.key === "ArrowRight" || e.key=== "ArrowLeft"){
+        sendBoat()
+    }
+    if (e.key === " "){
+        cleanBoat()
+    }
+
+    let pressed = e.key
+    if (!gameOver){
+        if (parseInt(pressed) > 6){
+                return
+        }
+        for (let i = 0; i < allPositions.length; i++){
+            let n = allPositions[i].id.replace(/[^0-9]/g, "")
+            if (boat.direction === "right"){
+                pressed = parseInt(e.key) + 6;
+            }
+            if (pressed == n){
+                let children = allPositions[i].children
+                for (let j = 0; j < children.length;j++){
+                    if (children[j].className != "tecla"){
+                        placeInBoat(children[j])    
+                    }
+                }
+            }
+        }
+    }
+}
+)
+addEventListener("click", (e) => {
+        let target = e.target
+        if (boat.direction !== "stopped"){
+            if (target.className === "cani" || target.className === "miss"){
+                if (target.parentElement.className === "boat-position"){  
+                    removeFromBoat(target)
+                }
+                else if (target.parentElement.className === "position") {
+                    placeInBoat(target)
+                }
+            }
+        }
+        
+    let content = 0;
+    let classTarget = e.target.className
+    if (classTarget === "box"){
+        let idTarget = e.target.id
+        let elementById = document.querySelector(`#${idTarget}`)
+        let parent = elementById.parentElement
+        let childrens = parent.children
+        for (let i = 0; i < childrens.length; i++){
+            if (childrens[i].className != "box"){
+                content = childrens[i]
+                break
+            }
+        }
+        if (content != 0){
+            if (content.style.height != "auto"){
+                content.style.height = "auto"
+                content.style.display = "block"
+            } else{
+                content.style.height = "0px"
+                content.style.display = "none"
+            }
+        }
+    }
+})
+
+
+setInterval(checkScreenWidth, 500)

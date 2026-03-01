@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pixelify+Sans:wght@400..700&display=swap');
 
-.fundo-go{
+.overlay-go{
     display: none;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-image: url("/images/texture.png");
+    background-image: url("/images/background/texture.png");
     width: 900px;
     height: 350px;
     border: 3px solid #342215;
@@ -54,7 +54,7 @@
 }
 .game-over h1{
     font-size: 80px;
-    color: #1edb66;
+    color: #db1e1e;
     text-shadow: 0px 4px #0f3f16, 1px 1px 1px black;
     margin-top: 10px;
     margin-bottom: 1px;
@@ -110,7 +110,7 @@
 
 @media only screen and (min-width: 603px) and (max-width:750px){
 
-    .fundo-go{
+    .overlay-go{
         display: none;
         align-items: center;
         justify-content: center;
@@ -134,7 +134,7 @@
 }
 
 @media only screen and (min-width: 750px) and (max-width:1000px){
-    .fundo-go{
+    .overlay-go{
         display: none;
         align-items: center;
         justify-content: center;
@@ -157,7 +157,7 @@
 }
 
 @media only screen and (min-width: 1000px) and (max-width:1300px){
-    .fundo-go{
+    .overlay-go{
         display: none;
         align-items: center;
         justify-content: center;

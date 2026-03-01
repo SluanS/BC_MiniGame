@@ -12,7 +12,7 @@ h1{
 
 .background{
     height: 100vh;
-    background-image: url("/images/Background.png");
+    background-image: url("/images/background/Background.png");
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -38,6 +38,7 @@ h1{
     background-image: linear-gradient(to bottom, #910707 40%, #d30e0e 60%);
     border-radius: 100%;
     box-shadow: 3px 3px 3px black;
+    z-index: 995;
 }
 
 .help button{

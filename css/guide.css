@@ -4,7 +4,7 @@
     display: none;
     position: absolute;
     font-family: "Pixelify Sans", sans-serif;
-    background-image: url("/images/wood.png");
+    background-image: url("/images/background/wood.png");
     width: 650px;
     height: 580px;
     padding: 10px 25px;
@@ -70,6 +70,7 @@
 }
 
 .mobile-guide{
+    display: none;
     animation-name: dropDownEffect;
     animation-duration: 1s;
 }

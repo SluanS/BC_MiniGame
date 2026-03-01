@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canibais e missionários</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/javascript/logic.js" defer></script>
+    <script src="/javascript/script.js" defer></script>
 </head>
 <body>
       <div class="rotation-screen">
@@ -15,164 +15,168 @@
             <div class="bottom-color"></div>
             <div class="rotation-icons-div">
                 <div class="torch-div">
-                    <img class="torch-orientation-screen" src="/images/rotation-screen-images/Torch-removebg.png" alt="">
+                    <img class="torch-orientation-screen" src="/images/rotation-screen-images/torch.png" alt="">
                 </div>
                 <div class="rotation-images">
                     <div class="circular-div">
                          <div class="circular-div2"></div>
                     </div>
                     <img class="phone-rotation-image" src="/images/rotation-screen-images/Smartphone.png" alt="">
-                    <img class="top-rotation-arrow" src="/images/rotation-screen-images/Flecha-orientacao.png" alt="">
-                    <img class="bottom-rotation-arrow" src="/images/rotation-screen-images/Flecha-orientacao.png" alt="">
+                    <img class="top-rotation-arrow" src="/images/rotation-screen-images/RotationArrow.png" alt="">
+                    <img class="bottom-rotation-arrow" src="/images/rotation-screen-images/RotationArrow.png" alt="">
                 </div>
             </div>
             <p>Gire seu telefone para jogar</p>
         </div>
     </div>
-    
+
+
+    <div class="guide">
+        <button onclick="interactionGuide()" class="closeGuide">X</button>
+        <h1>Guia</h1>
+        <div class="floating-div">
+            <button onclick="interactionGuide()" class="start-game">Vamos lá</button>
+        </div>
+        <div class="introduction">
+            <p>Parece que os nossos <span>missionários</span> estão enfrentando alguns problemas em sua missão de catequisição nessa ilha remota. Agora eles se encontram precisando <span>chegar a outra margem da praia</span>, porém, eles não são os únicos que querem atravessar. Há também os <span>nativos</span> da ilha que aparentam uma predileção estranha em se servir de missionários vuneráveis. <br><br> Cabe a você ajudar esse distinto grupo a atravessar para a outra margem com nada além de um barquinho furreca com espaço para dois</p>
+        </div>    
+        <div id="option1" class="option">
+            <div class="box" id="box1">
+                <h2>Regras do jogo</h2>
+                <img src="/images/icons/BiggerThanIcon.png" alt="">
+            </div>
+            <div class="game-rules">
+                <p><span>Considere que:</span><br>Temos </p>
+                <ul>
+                    <li>3 missionários</li>
+                    <li>3 canibais</li>
+                </ul>
+                <p>Sobre o barco:</p>
+                    <ul>
+                        <li>Capacidade de levar até <span>2</span> individuos por vez</li>
+                        <li>O barco precisa de ao menos <span>1</span> indiduo dentro dele para navegar entre as duas margens</li>
+                        <li>O barco pode transitar pelas duas margens quantas vezes forem necessárias</li>
+                    </ul>
+                <p><span>Importante!</span></p>
+                <ul>
+                    <li>Você <span>NÃO</span> deve permitir que o número de <span>CANIBAIS</span> seja <span>MAIOR</span> do que o número de <span>MISSIONÁRIOS</span> em nenhuma das duas margens, não queremos saciar o apetite dos nativos ao deixa-los em vantagem númerica, não é mesmo?</li>
+                </ul>   
+                <div class="illustrative-exemple">
+                    <div class="wrong-exemple">
+                        <img class="wrong-signal" src="/images/icons/Wrong.png" alt="">
+                        <img class="pope-dead-head" src="/images/characters/characters-heads/BishopDeadHead.png" alt="">
+                        <img src="/images/icons/LessThanIcon.png" alt="">
+                        <img src="/images/characters/characters-heads/JefreyHead.png" alt="">
+                        <img src="/images/characters/characters-heads/LecterHead.png" alt="">
+                    </div>
+                    <div class="right-exemple">
+                        <img class="right-signal" src="/images/icons/correct.png" alt="">
+                        <img src="/images/characters/characters-heads/NunHead.png" alt="">
+                        <img src="/images/characters/characters-heads/CardialHead.png" alt="">
+                        <img src="/images/icons/equalSign.png" alt="">
+                        <img src="/images/characters/characters-heads/LecterHead.png" alt="">
+                        <img src="/images/characters/characters-heads/JefreyHead.png" alt="">
+                    </div>
+                </div>
+                <p>Você vence quando todos os <span>TODOS OS 6</span> individuos atravessarem para a outra margem.</p> 
+            </div>  
+        </div>
+        <div class="option" id="option2">
+            <div class="box" id="box2">
+                <h2>Comandos no desktop</h2>
+                <img src="/images/icons/BiggerThanIcon.png" alt="">
+            </div>
+            <div class="desktop-comands">
+                <p>Seleção de personagens:</p>
+                <div class="character-selection">
+                    <div class="numericKey">
+                        <img src="/images/key-illustration/key1.png" alt="">
+                        <img class="unique-line" src="/images/icons/uniqueLine.png" alt="">
+                        <img src="/images/key-illustration/key6.png" alt="">
+                    </div>
+                    <p><span>interação com teclado:</span></p>
+                    <p>Para <span>selecionar</span> um personagem que deseja colocar no barco, basta aperta a <span>tecla númerica</span> correspondente ao número indicado acima da posição atual do personagem. O personagem só será alocado no barco se o barco se encontrar na <span>mesma margem</span> que o personagem e/ou estiver com espaço livres</p>
+                    <p><span>Ou</span></p>
+                    <div class="click-exemple-img"><img src="/images/guide/click-illustration.png" alt=""></div>
+                    <p><span>interação com clique</span></p>
+                    <p class="click-tip">Você pode também cliclar com seu mouse diretamente no personagem que deseja mover, se houver espaço disponível o personagem será movido da margem para o barco ou do barco para a margem</p>
+                </div>
+                <p>Remover do barco: </p>
+                <div class="boat-interaction">
+                    <p><span>Tecla espaço para limpar</span></p>
+                    <div class="clean-boat-exemple"> 
+                        <img src="/images/guide/boat-illustrative-exemple.png" alt="">
+                        <img class="arrow" src="/images/icons/BiggerThanIcon.png" alt="">
+                        <img src="/images/key-illustration/space-key.png" alt="">
+                        <img class="arrow" src="/images/icons/BiggerThanIcon.png" alt="">
+                        <img class="empty-boat-img" src="/images/guide/empty-boat-exemple.png" alt="">
+                    </div>
+                    <p>Caso queira fazer o desembarque rapido dos personagens que estão dentro de barco, basta apertar a tecla "espaço" no seu teclado, assim, todos os personagens abordo desembarcarão na margem atual. <br> Você pode também clicar com o mouse em um personagem especifico que deseja remover do barco</p>
+                </div>
+                <p>Movimentação do barco</p>
+                <div class="boat-movement">
+                    <div class="directional-keys">
+                        <img src="/images/key-illustration/left-directional-key.png" alt="">
+                        <img src="/images/key-illustration/right-directional-key.png" alt="">
+                    </div>
+                    <p><span>Movimentação de barco com teclas direcionais</span></p>
+                    <p>Para mover o barco entre as margens, basta utilizar as teclas direcionais do seu teclado. certifique-se de que haja ao menos um tripulante no barco para que a movimentação do barco entre as margens seja habilitada.</p>
+                </div>
+            </div>
+        </div>
+        <div class="option" id="option3">
+            <div class="box" id="box3">
+                <h2>Comandos em mobile</h2>
+                <img src="/images/icons/BiggerThanIcon.png" alt="">
+            </div>
+            <div class="mobile-guide">
+                <p><span>Comandos em dispositivos mobile</span></p>
+                <p>Em dispositivos moveis, seu principal meio de interação será através do controle de central exibido no centro da tela.</p>
+                <div class="controll-illustration-div">
+                    <img class="controll-illustration-img" src="/images/guide/controll-illustration.png" alt="">
+                </div>
+                <ul>
+                    <li>Utilize das setas direcionais para mover o barco</li>
+                    <li>Clique no botão circular central para limpar o barco</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="background">
         <header>
             <nav>
-                <a href="#"><img onclick="resetGame()" class="logo" src="/images/logo.png" alt="" ></a>
-                <a href="#"><img onclick="interactionMenu()" class="menu-icon" src="/images/menu-icon.png" alt=""></a>
-                <img onclick="resetGame()" class="reestart" src="/images/reestart.png" alt="">
+                <a href="#"><img onclick="resetGame()" class="logo" src="/images/icons/logo.png" alt="" ></a>
+                <a href="#"><img onclick="interactionMenu()" class="menu-icon" src="/images/icons/menu-icon.png" alt=""></a>
+                <img onclick="resetGame()" class="restart" src="/images/icons/restart.png" alt="">
             </nav>
         </header>
         <h1 class="main-header">Ajude-os a atravessar</h1>
         <h2 class="contador">0/6</h2>
-        <div class="guide">
-            <button onclick="interactionGuide()" class="closeGuide">X</button>
-            <h1>Guia</h1>
-            <div class="floating-div">
-                <button onclick="interactionGuide()" class="start-game">Vamos lá</button>
-            </div>
-            <div class="introduction">
-                <p>Parece que os nossos <span>missionários</span> estão enfrentando alguns problemas em sua missão de catequisição nessa ilha remota. Agora eles se encontram precisando <span>chegar a outra margem da praia</span>, porém, eles não são os únicos que querem atravessar. Há também os <span>nativos</span> da ilha que aparentam uma predileção estranha em se servir de missionários vuneráveis. <br><br> Cabe a você ajudar esse distinto grupo a atravessar para a outra margem com nada além de um barquinho furreca com espaço para dois</p>
-            </div>
-            
-            <div id="option1" class="option">
-                <div class="box" id="box1">
-                    <h2>Regras do jogo</h2>
-                    <img src="/images/maior-que.png" alt="">
-                </div>
-                <div class="game-rules">
-                    <p><span>Considere que:</span><br>Temos </p>
-                    <ul>
-                        <li>3 missionários</li>
-                        <li>3 canibais</li>
-                    </ul>
-                    <p>Sobre o barco:</p>
-                        <ul>
-                            <li>Capacidade de levar até <span>2</span> individuos por vez</li>
-                            <li>O barco precisa de ao menos <span>1</span> indiduo dentro dele para navegar entre as duas margens</li>
-                            <li>O barco pode transitar pelas duas margens quantas vezes forem necessárias</li>
-                        </ul>
-                    <p><span>Importante!</span></p>
-                    <ul>
-                        <li>Você <span>NÃO</span> deve permitir que o número de <span>CANIBAIS</span> seja <span>MAIOR</span> do que o número de <span>MISSIONÁRIOS</span> em nenhuma das duas margens, não queremos saciar o apetite dos nativos ao deixa-los em vantagem númerica, não é mesmo?</li>
-                    </ul>   
-                    <div class="illustrative-exemple">
-                        <div class="wrong-exemple">
-                            <img class="wrong-signal" src="/images/errado.png" alt="">
-                            <img class="pope-dead-head" src="/images/characters/head/Pope dead head.png" alt="">
-                            <img src="/images/menor-que.png" alt="">
-                            <img src="/images/characters/head/Cani drake head.png" alt="">
-                            <img src="/images/characters/head/Canibal Lecter head.png" alt="">
-                        </div>
-                        <div class="right-exemple">
-                            <img class="right-signal" src="/images/correto.png" alt="">
-                            <img src="/images/characters/head/Nun head.png" alt="">
-                            <img src="/images/characters/head/cardial head.png" alt="">
-                            <img src="/images/sinal-igual.png" alt="">
-                            <img src="/images/characters/head/Canibal Lecter head.png" alt="">
-                            <img src="/images/characters/head/Cani drake head.png" alt="">
-                        </div>
-                    </div>
-                    <p>Você vence quando todos os <span>TODOS OS 6</span> individuos atravessarem para a outra margem.</p> 
-                </div>  
-            </div>
-            <div class="option" id="option2">
-                    <div class="box" id="box2">
-                        <h2>Comandos no desktop</h2>
-                        <img src="/images/maior-que.png" alt="">
-                    </div>
-                    <div class="desktop-comands">
-                    <p>Seleção de personagens:</p>
-                    <div class="character-selection">
-                        <div class="numericKey">
-                            <img src="/images/teclas/tecla1.png" alt="">
-                            <img class="unique-line" src="/images/linha-unica.png" alt="">
-                            <img src="/images/teclas/tecla6.png" alt="">
-                        </div>
-                        <p><span>interação com teclado:</span></p>
-                        <p>Para <span>selecionar</span> um personagem que deseja colocar no barco, basta aperta a <span>tecla númerica</span> correspondente ao número indicado acima da posição atual do personagem. O personagem só será alocado no barco se o barco se encontrar na <span>mesma margem</span> que o personagem e/ou estiver com espaço livres</p>
-                        <p><span>Ou</span></p>
-                        <div class="click-exemple-img"><img src="/images/guide.img/click-illustration.png" alt=""></div>
-                        <p><span>interação com clique</span></p>
-                        <p class="click-tip">Você pode também cliclar com seu mouse diretamente no personagem que deseja mover, se houver espaço disponível o personagem será movido da margem para o barco ou do barco para a margem</p>
-                    </div>
-                    <p>Remover do barco: </p>
-                    <div class="boat-interaction">
-                        <p><span>Tecla espaço para limpar</span></p>
-                        <div class="clean-boat-exemple"> 
-                            <img src="/images/guide.img/boat-illustrative-exemple.png" alt="">
-                            <img class="arrow" src="/images/maior-que.png" alt="">
-                            <img src="/images/teclas/space-key.png" alt="">
-                            <img class="arrow" src="/images/maior-que.png" alt="">
-                            <img class="empty-boat-img" src="/images/guide.img/empty-boat-exemple.png" alt="">
-                        </div>
-                        <p>Caso queira fazer o desembarque rapido dos personagens que estão dentro de barco, basta apertar a tecla "espaço" no seu teclado, assim, todos os personagens abordo desembarcarão na margem atual. <br> Você pode também clicar com o mouse em um personagem especifico que deseja remover do barco</p>
-                    </div>
-                    <p>Movimentação do barco</p>
-                    <div class="boat-movement">
-                        <div class="directional-keys">
-                            <img src="/images/teclas/tecla-direcional-esquerda.png" alt="">
-                            <img src="/images/teclas/tecla-direcional-direita.png" alt="">
-                        </div>
-                        <p><span>Movimentação de barco com teclas direcionais</span></p>
-                        <p>Para mover o barco entre as margens, basta utilizar as teclas direcionais do seu teclado. certifique-se de que haja ao menos um tripulante no barco para que a movimentação do barco entre as margens seja habilitada.</p>
-                    </div>
-                    </div>
-                </div>
-                    <div class="option" id="option3">
-                        <div class="box" id="box3">
-                                <h2>Comandos em mobile</h2>
-                                <img src="/images/maior-que.png" alt="">
-                            </div>
-                            <div class="mobile-guide">
-                                <p><span>Comandos em dispositivos mobile</span></p>
-                                <p>Em dispositivos moveis, seu principal meio de interação será através do controle de central exibido no centro da tela.</p>
-                                <div class="controll-illustration-div">
-                                    <img class="controll-illustration-img" src="/images/guide.img/controll-illustration.png" alt="">
-                                </div>
-                            <ul>
-                                <li>Utilize das setas direcionais para mover o barco</li>
-                                <li>Clique no botão circular central para limpar o barco</li>
-                            </ul>
-                            </div>
-                    </div>
-            </div>
-        <div class="position" id="position1"><img class = "tecla" src="/images/teclas/tecla1.png" alt=""><img class="cani" id="char1" src="/images/characters/Dona_docura.gif" alt=""></div>
-        <div class="position" id="position2"><img class = "tecla" src="/images/teclas/tecla2.png" alt=""><img class="cani" id="char2" src="/images/characters/Jefrey.gif" alt=""></div>
-        <div class="position" id="position3"><img class = "tecla" src="/images/teclas/tecla3.png" alt=""><img class="cani" id="char3" src="/images/characters/Canibal Lecter.gif" alt=""></div>
-        <div class="position" id="position4"><img class = "tecla" src="/images/teclas/tecla4.png" alt=""><img class="miss" id="char4" src="/images/characters/Nun.gif" alt=""></div>
-        <div class="position" id="position5"><img class = "tecla" src="/images/teclas/tecla5.png" alt=""><img class="miss" id="char5" alt="" src="/images/characters/Cardial.gif"></div>
-        <div class="position" id="position6"><img class = "tecla" src="/images/teclas/tecla6.png" alt=""><img class="miss" id="char6" alt="" src="/images/characters/Pope.gif"></div>
-        <div class="position" id="position7"><img class = "tecla" src="/images/teclas/tecla1.png" alt=""></div>
-        <div class="position" id="position8"><img class = "tecla" src="/images/teclas/tecla2.png" alt=""></div>
-        <div class="position" id="position9"><img class = "tecla" src="/images/teclas/tecla3.png" alt=""></div>
-        <div class="position" id="position10"><img class = "tecla" src="/images/teclas/tecla4.png" alt=""></div>
-        <div class="position" id="position11"><img class = "tecla" src="/images/teclas/tecla5.png" alt=""></div>
-        <div class="position" id="position12"><img class = "tecla" src="/images/teclas/tecla6.png" alt=""></div>
+        <div class="position" id="position1"><img class = "tecla" src="/images/key-illustration/key1.png" alt=""><img class="cani" id="char1" src="/images/characters/Cannibal-Sweet-lady.gif" alt=""></div>
+        <div class="position" id="position2"><img class = "tecla" src="/images/key-illustration/key2.png" alt=""><img class="cani" id="char2" src="/images/characters/Cannibal-Jefrey.gif" alt=""></div>
+        <div class="position" id="position3"><img class = "tecla" src="/images/key-illustration/key3.png" alt=""><img class="cani" id="char3" src="/images/characters/Cannibal-Lecter.gif" alt=""></div>
+        <div class="position" id="position4"><img class = "tecla" src="/images/key-illustration/key4.png" alt=""><img class="miss" id="char4" src="/images/characters/Nun.gif" alt=""></div>
+        <div class="position" id="position5"><img class = "tecla" src="/images/key-illustration/key5.png" alt=""><img class="miss" id="char5" alt="" src="/images/characters/Cardial.gif"></div>
+        <div class="position" id="position6"><img class = "tecla" src="/images/key-illustration/key6.png" alt=""><img class="miss" id="char6" alt="" src="/images/characters/Pope.gif"></div>
+        <div class="position" id="position7"><img class = "tecla" src="/images/key-illustration/key1.png" alt=""></div>
+        <div class="position" id="position8"><img class = "tecla" src="/images/key-illustration/key2.png" alt=""></div>
+        <div class="position" id="position9"><img class = "tecla" src="/images/key-illustration/key3.png" alt=""></div>
+        <div class="position" id="position10"><img class = "tecla" src="/images/key-illustration/key4.png" alt=""></div>
+        <div class="position" id="position11"><img class = "tecla" src="/images/key-illustration/key5.png" alt=""></div>
+        <div class="position" id="position12"><img class = "tecla" src="/images/key-illustration/key6.png" alt=""></div>
         <div class="interactive-div" id="interactive-div-left">
-            <div class="boat"><img src="/images/characters/Barco-gif.gif" alt=""></div>
+            <div class="boat"><img src="/images/characters/Boat.gif" alt=""></div>
             <div class="boat-position" id="bp1"></div>
             <div class="boat-position" id="bp2"></div>
         </div>
-        <div class="interactive-div" id="interactive-div-right">
-        </div>
+        <div class="interactive-div" id="interactive-div-right"></div>
         <div class="help"><button onclick="interactionGuide()">?</button></div>
     </div> 
+
+
     <div class="controll-main-div">
         <div class="controll">
             <img onclick="sendBoat()" class="pointer-left" src="/images/controls/pointer-left.png" alt="">
@@ -180,20 +184,25 @@
             <img onclick="sendBoat()" class="pointer-right"src="/images/controls/pointer-right.png" alt="">
         </div>
     </div>
-        <div class="fundo-go">
-            <div class="game-over">
-                <button onclick="closeWindow()" class="close-button" type="button" aria-label="Close">X</button>
-                <img src="#" alt="">
-                <img src="#" alt="">
-                <img src="#" alt="">
-                <h1>Game Over</h1>
-                <h2>Menssagem rotativa</h2>
-                <h3>Tentar de novo?</h3>
-                <button onclick="resetGame()" class="alternative">Sim</button>
-                <button onclick="closeWindow()" class="alternative">Não</button>
-            </div>
+
+
+
+    <div class="overlay-go">
+        <div class="game-over">
+            <button onclick="closeWindow()" class="close-button" type="button" aria-label="Close">X</button>
+            <img src="#" alt="">
+            <img src="#" alt="">
+            <img src="#" alt="">
+            <h1>Game Over</h1>
+            <h2>Você deixou os missionários na mão</h2>
+            <h3>Tentar de novo?</h3>
+            <button onclick="resetGame()" class="alternative">Sim</button>
+            <button onclick="closeWindow()" class="alternative">Não</button>
         </div>
-        <div class="base-char-info-div">
+    </div>
+
+
+    <div class="base-char-info-div">
         <div class="character-info-div">
             <button onclick="interactionCharInfo()">X</button>
             <button onclick="interactionCharInfo()" class="start-game-button">Voltar ao jogo</button>
@@ -202,17 +211,17 @@
             <div class="cani-info">
                 <div class="char-card-info">
                     <h3>H. Lecter</h3>
-                    <img src="/images/characters/Canibal Lecter.gif" alt="">
+                    <img src="/images/characters/Cannibal-Lecter.gif" alt="">
                     <p>Sua aparência pode ser sinistra, mas H. Lecter é um indivíduo de trejeitos rebuscados. Valoriza literatura classica, vinhos Finos, conversas profundas e... gente. </p>   
                 </div>
                 <div class="char-card-info">
                     <h3>Dona doçura</h3>
-                    <img src="/images/characters/Dona_docura.gif" alt="">
+                    <img src="/images/characters/Cannibal-Sweet-lady.gif" alt="">
                     <p>A primeira vista, tudo que se percebe sobre dona doçura é uma senhorinha de fala mansa e rosto gentil. Mas não se engane, por trás da imagem de boa senhora existe uma mulher paciente, sempre alimentando suas vitimas com as mais saborosas guoloseimas, tudo para deixa-las rechoncudas o suficiente para que no fim seja Dona doçura a ultima a se servir. <br> Dizem que crianças que se perdem dos pais são seus alvos preferidos.</p>
                 </div>
                 <div class="char-card-info">
                     <h3>Jefrey D.</h3>
-                    <img src="/images/characters/Jefrey.gif" alt="">
+                    <img src="/images/characters/Cannibal-Jefrey.gif" alt="">
                     <p> Vindo diretamente das Américas, Jefrey não encontrou dificuldade alguma ao se adaptar aos habitantes da ilha e a sua dieta desconcertante. Basta conhecê-lo melhor para saber que o lugar dele é entre os bárbaros, bem longe da civilização comedora de salada.</p>
                 </div>
             </div>
@@ -236,21 +245,25 @@
             </div>
         </div>
     </div>
+
+
+
     <div class="menu-base-div">
-    <div class="menu-div">
-        <h2>Menu</h2>
-        <button onclick="interactionMenu()" class="close-menu-button">X</button>
-        <div class="menu-options-div">
-            <div class="menu-option">
-                <img onclick="interactionCharInfo()" class="generic-char-icon" src="/images/generic-icon-char.png" alt="">
-                <p>Personagens</p>
-            </div>
-            <a target="_blank" href="https://www.linkedin.com/in/luan-silva-developer">
+        <div class="menu-div">
+            <h2>Menu</h2>
+            <button onclick="interactionMenu()" class="close-menu-button">X</button>
+            <div class="menu-options-div">
                 <div class="menu-option">
-                    <img class="linkedin-icon" src="/images/Linkedin-icon.png" alt="">
-                    <p>Meu Linkedin</p>
+                    <img onclick="interactionCharInfo()" class="generic-char-icon" src="/images/icons/generic-icon-char.png" alt="">
+                    <p>Personagens</p>
                 </div>
-            </a>
+                <a target="_blank" href="https://www.linkedin.com/in/luan-silva-developer">
+                    <div class="menu-option">
+                        <img class="linkedin-icon" src="/images/icons/Linkedin-icon.png" alt="">
+                        <p>Meu Linkedin</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </body>
