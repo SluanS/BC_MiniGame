@@ -55,12 +55,12 @@ h1{
 
 .help:hover {
     padding-top: 5px;
-    animation-name: upDown;
+    animation-name: popEffect;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
 
-@keyframes upDown {
+@keyframes popEffect {
     10% {
         transform: scale(1);
     }

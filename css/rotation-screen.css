@@ -103,7 +103,6 @@ body{
     left: -50px;
     top: 0px;
     background-color: #81DCF8;
-    /* left: 500px; */
     z-index: 1;
 }
 
@@ -112,7 +111,6 @@ body{
     width: 200px;
     height: 90px;
     bottom: 10px;
-    /* top: 500px; */
     background-color: #73CDE9;
     border-radius: 100%;
 }

@@ -25,7 +25,6 @@
 .menu-div h2{
     float: left;
     font-size: 50px;
-    /* text-align: center; */
     margin-bottom: -10px;
     margin-top: 0px;
     margin-left: 10px;
@@ -58,7 +57,6 @@
 }
 
 .menu-options-div p{
-    /* color: rgb(0, 255, 55); */
     margin-top: 5px;
 }
 

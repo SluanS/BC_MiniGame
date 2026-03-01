@@ -109,7 +109,6 @@
     padding: 10px;
     border-radius: 20px;
     padding: 20px;
-    margin:  10px,50px;
 }
 
 .guide p{
@@ -318,6 +317,12 @@ li span{
     }
     100%{
         transform: translatey(0px);
+    }
+}
+
+@media only screen and (max-width:632px){
+    .guide{
+        display: none !important;
     }
 }
 
