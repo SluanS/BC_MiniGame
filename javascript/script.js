@@ -295,8 +295,14 @@ addEventListener("click", (e) => {
         
     let content = 0;
     let classTarget = e.target.className
-    if (classTarget === "box"){
-        let idTarget = e.target.id
+    let idTarget;
+    if (e.target.parentElement.className === "box"){
+         idTarget = e.target.parentElement.id
+    }
+    else if (classTarget === "box"){
+         idTarget = e.target.id
+    }
+    if (idTarget !== undefined){
         let elementById = document.querySelector(`#${idTarget}`)
         let parent = elementById.parentElement
         let childrens = parent.children
