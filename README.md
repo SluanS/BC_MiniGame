@@ -86,7 +86,7 @@ Os personagens poderão ter as seguintes ações:
 - Alocados no barco (Se espaço disponível)
 - Alocados na margem atual do barco
 
-Para ser capaz de fazer isso, o usuário pode optar por <strong> clicar diretamente </strong> com seu mouse no personagem desejado ou clicar diretamente em um dos atalhos de teclado exibidos sobre a posição atual do personagem desejado.
+Para ser capaz de fazer isso, o usuário pode optar por <strong> clicar diretamente </strong> com seu mouse no personagem desejado ou pressionar diretamente um dos atalhos de teclado exibidos sobre a posição atual do personagem desejado.
 
 Interação com o barco:
 
