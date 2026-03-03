@@ -41,7 +41,7 @@ Index.html: Documento HTML principal.
 
 ## Sobre o mini-game
 
-Aqui vemos uma versão visual do clássico desafio de lógica "Canibais e missionários" onde seu principal objetivo é fazer com que todos os canibais e missionários alcancem à margem oposta com um barco mas sem nunca permitir que os canibais estejam em vantagem numérica.
+Aqui vemos uma versão visual do clássico desafio de lógica "Canibais e missionários" onde seu principal objetivo é fazer com que todos os canibais e missionários alcancem à margem oposta com um barco, mas sem nunca permitir que os canibais estejam em vantagem numérica.
 
 ### Regras:
 
